@@ -1,0 +1,91 @@
+@mixin text-style-60() {
+	font-size: $font-size-60;
+	line-height: $line-height-60;
+}
+
+@mixin text-style-52() {
+	font-size: $font-size-52;
+	line-height: $line-height-52;
+}
+
+@mixin text-style-42() {
+	font-size: $font-size-42;
+	line-height: $line-height-42;
+}
+
+@mixin text-style-32() {
+	font-size: $font-size-32;
+	line-height: $line-height-32;
+}
+
+@mixin text-style-24() {
+	font-size: $font-size-24;
+	line-height: $line-height-24;
+}
+
+@mixin text-style-20() {
+	font-size: $font-size-20;
+	line-height: $line-height-20;
+}
+
+@mixin text-style-18() {
+	font-size: $font-size-18;
+	line-height: $line-height-18;
+}
+
+@mixin text-style-16() {
+	font-size: $font-size-16;
+	line-height: $line-height-16;
+}
+
+@mixin text-style-15() {
+	font-size: $font-size-15;
+	line-height: $line-height-15;
+}
+
+@mixin text-style-14() {
+	font-size: $font-size-14;
+	line-height: $line-height-14;
+}
+
+@mixin text-style($size, $color: false, $fontfamily: false) {
+	@if ($size == 60) {
+		@include text-style-60;
+	}
+	@if ($size == 52) {
+		@include text-style-52;
+	}
+	@if ($size == 42) {
+		@include text-style-42;
+	}
+	@if ($size == 32) {
+		@include text-style-32;
+	}
+	@if ($size == 24) {
+		@include text-style-24;
+	}
+	@if ($size == 20) {
+		@include text-style-20;
+	}
+	@if ($size == 18) {
+		@include text-style-18;
+	}
+	@if ($size == 16) {
+		@include text-style-16;
+	}
+	@if ($size == 15) {
+		@include text-style-15;
+	}
+	@if ($size == 14) {
+		@include text-style-14;
+	}
+
+	@if (type-of($color) == color) {
+		color: $color;
+	}
+
+	@if ($fontfamily == $font-sub) {
+		font-family: $font-sub;
+		letter-spacing: 0;
+	}
+}
