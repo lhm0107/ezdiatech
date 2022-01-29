@@ -1,0 +1,43 @@
+// scss-lint:disable all
+i {
+	font-family: 'ezdiatech' !important;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.ic-home:before {
+	content: '\e900';
+}
+
+.ic-serch:before {
+	content: '\e901';
+}
+
+.ic-chevron:before {
+	content: '\e902';
+}
+
+.ic-chevronduble:before {
+	content: '\e904';
+}
+
+.ic-close:before {
+	content: '\e907';
+}
+
+.ic-asterisk:before {
+	content: '\e909';
+}
+
+.ic-hambuger:before {
+	content: '\e90a';
+}
+
+.ic-checked:before {
+	content: '\e90c';
+}
