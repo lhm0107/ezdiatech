@@ -4,6 +4,18 @@
 }
 
 .button-plus {
+	display: block;
+	@include flexbox;
+	width: 43px;
+	height: 43px;
+	border: 1px solid $white;
+	border-radius: 50%;
+
+	i {
+		font-family: xeicon;
+		font-size: 11px;
+		color: $white;
+	}
 }
 
 .btn-contact {
