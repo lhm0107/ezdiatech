@@ -4,7 +4,9 @@
 <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 	 y="0px" width="11px" height="11px" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve">
 <g id="그룹_423" transform="translate(-1632.5 -674)">
-	<line id="선_104" fill="none" stroke="#000000" x1="1632.5" y1="679.5" x2="1643.5" y2="679.5"/>
-	<line id="선_105" fill="none" stroke="#000000" x1="1638" y1="674" x2="1638" y2="685"/>
+	<line id="선_104" fill="none" stroke="#000000" stroke-miterlimit="10" x1="1632.5" y1="679.5" x2="1643.5" y2="679.5"/>
+	<line id="선_105" fill="none" stroke="#000000" stroke-miterlimit="10" x1="1638" y1="674" x2="1638" y2="685"/>
 </g>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="11" y1="5.5" x2="0" y2="5.5"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="5.5" y1="0" x2="5.5" y2="11"/>
 </svg>
