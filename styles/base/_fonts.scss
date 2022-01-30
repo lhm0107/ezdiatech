@@ -1,12 +1,9 @@
 // scss-lint:disable all
 @font-face {
-  font-family: 'ezdiatech';
-  src:  url('./assets/fonts/ezdiatech.eot');
-  src:  url('./assets/fonts/ezdiatech.eot') format('embedded-opentype'),
-    url('./assets/fonts/ezdiatech.ttf') format('truetype'),
-    url('./assets/fonts/ezdiatech.woff') format('woff'),
-    url('./assets/fonts/ezdiatech.svg#ezdiatech') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+	font-family: 'ezdiatech';
+	src: url('fonts/ezdiatech.eot');
+	src: url('fonts/ezdiatech.eot') format('embedded-opentype'), url('fonts/ezdiatech.ttf') format('truetype'), url('fonts/ezdiatech.woff') format('woff'), url('fonts/ezdiatech.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
 }

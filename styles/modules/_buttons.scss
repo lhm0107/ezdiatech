@@ -3,6 +3,9 @@
 	font-weight: 700;
 }
 
+.button-plus {
+}
+
 .btn-contact {
 	@extend %btn-base;
 	@include text-style(24, $white);
