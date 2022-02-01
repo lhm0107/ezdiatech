@@ -137,6 +137,22 @@ ul, ol, li { padding-left: 0; list-style: none; }
 
 address { font-style: normal; }
 
+.visually-hidden { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
+
+@media screen and (min-width: 768px) { .sm-only { display: none !important; } }
+
+@media screen and (max-width: 767px) { .md-only { display: none !important; } }
+
+@media screen and (min-width: 1200px) { .md-only { display: none !important; } }
+
+@media screen and (max-width: 1199px) { .lg-only { display: none !important; } }
+
+@media screen and (max-width: 767px) { .sm-hidden { display: none !important; } }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) { .md-hidden { display: none !important; } }
+
+@media screen and (min-width: 1200px) { .lg-hidden { display: none !important; } }
+
 /*
 * MOBILE (<768px)--------------------------------------------------------------
 * fixture-----------------------------------------------sm
@@ -203,6 +219,22 @@ address { font-style: normal; }
   .container .col-lg-10 { width: 950px; }
   .container .col-lg-11 { width: 1045px; }
   .container .col-lg-12 { width: 1140px; } }
+
+.gnb-top { display: flex; align-items: center; justify-content: space-between; position: relative; margin: 10px 0; }
+
+.gnb-button-language { display: flex; align-items: center; justify-content: center; order: 2; width: 40px; height: 32px; font-family: 'Montserrat', sans-serif; font-size: 7px; line-height: 14px; color: #fff; text-align: center; border: 1px solid #dfe0e8; border-radius: 13px; }
+
+.gnb-button-language i { font-size: 14px; }
+
+.gnb-button-menu { order: 1; width: 32px; height: 32px; }
+
+.gnb-button-menu i { font-size: 30px; color: #fff; }
+
+.gnb .logo { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.gnb .logo a { display: block; }
+
+.gnb .logo img { display: block; width: auto; height: 32px; }
 
 .btn-contact, .btn-list, .btn-upload { display: inline-flex; align-items: center; justify-content: center; font-weight: 700; }
 
@@ -1986,7 +2018,7 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .diagram { width: 100px; height: 149px; }
 
-.diagram-img { width: 100px; height: 100px; background-color: #e7e9f6; background-image: url("./assets/images/ico-tech1.png"); background-position: center; background-repeat: no-repeat; border-radius: 50%; margin-bottom: 9px; }
+.diagram-img { width: 100px; height: 100px; margin-bottom: 9px; background-color: #e7e9f6; background-image: url("./assets/images/ico-tech1.png"); background-position: center; background-repeat: no-repeat; border-radius: 50%; }
 
 .diagram-text { font-size: 14px; line-height: 24px; color: #5e6074; text-align: center; }
 

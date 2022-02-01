@@ -1,0 +1,49 @@
+.gnb {
+	&-top {
+		@include flexbox(between);
+		position: relative;
+		margin: 10px 0;
+	}
+
+	&-button-language {
+		@include flexbox;
+		order: 2;
+		width: 40px;
+		height: 32px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 7px;
+		line-height: 14px;
+		color: $white;
+		text-align: center;
+		border: 1px solid $border;
+		border-radius: 13px;
+
+		i {
+			font-size: 14px;
+		}
+	}
+
+	&-button-menu {
+		order: 1;
+		width: 32px;
+		height: 32px;
+
+		i {
+			font-size: 30px;
+			color: $white;
+		}
+	}
+
+	.logo {
+		@include position-center;
+		a {
+			display: block;
+		}
+
+		img {
+			display: block;
+			width: auto;
+			height: 32px;
+		}
+	}
+}
