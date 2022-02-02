@@ -46,4 +46,55 @@
 			height: 32px;
 		}
 	}
+
+	@include responsive(T) {
+		.logo {
+			position: static;
+			transform: none;
+		}
+
+		&-button-menu {
+			order: 2;
+		}
+
+		&-button-language {
+			order: 1;
+			margin-right: -50px;
+		}
+
+		@include responsive(D) {
+			.logo {
+				img {
+					height: 45px;
+				}
+			}
+
+			&-button-menu {
+				order: 2;
+				width: 44px;
+				height: 44px;
+
+				i {
+					font-size: 43px;
+					color: $white;
+				}
+			}
+
+			&-button-language {
+				@include flexbox;
+				order: 1;
+				width: 80px;
+				height: 44px;
+				padding-left: 8px;
+				margin-right: -110px;
+				font-size: 14px;
+				line-height: 28px;
+				border-radius: 26px;
+
+				i {
+					font-size: 28px;
+				}
+			}
+		}
+	}
 }

@@ -15,10 +15,12 @@
 @import './mixins/scrollbar';
 @import './mixins/truncate';
 
-@import './layouts/grids';
-@import './layouts/gnb';
-
 @import './modules/buttons';
 @import './modules/icons';
 @import './modules/pagenation';
 @import './modules/diagram';
+
+@import './components/gnb-nav';
+
+@import './layouts/grids';
+@import './layouts/gnb';
