@@ -1939,21 +1939,13 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .diagram-text { font-size: 14px; line-height: 24px; color: #5e6074; text-align: center; }
 
-.gnb-nav-list { display: flex; align-items: center; justify-content: center; }
-
-.gnb-nav-item { margin-right: 10px; }
-
-.gnb-nav-item:last-child { margin-right: 0; }
-
-.gnb-nav-item a { font-size: 14px; line-height: 24px; color: #fff; font-family: "Poppins", sans-serif; letter-spacing: 0; }
-
-@media screen and (min-width: 768px) { .gnb-nav-item { margin-right: 20px; }
-  .gnb-nav-item:last-child { margin-right: 0; }
-  .gnb-nav-item a { font-size: 16px; line-height: 28px; color: #fff; font-family: "Poppins", sans-serif; letter-spacing: 0; } }
+@media screen and (min-width: 768px) { .gnb-nav-list { display: flex; align-items: center; justify-content: center; margin-right: 10px; }
+  .gnb-nav a { font-size: 16px; line-height: 28px; color: #fff; font-family: "Poppins", sans-serif; letter-spacing: 0; }
+  .gnb-nav-item { margin-right: 40px; }
+  .gnb-nav-item:last-child { margin-right: 0; } }
 
 @media screen and (min-width: 1200px) { .gnb-nav-item { margin-right: 80px; }
-  .gnb-nav-item:last-child { margin-right: 0; }
-  .gnb-nav-item a { font-size: 16px; line-height: 28px; color: #fff; font-family: "Poppins", sans-serif; letter-spacing: 0; } }
+  .gnb-nav-item:last-child { margin-right: 0; } }
 
 /*
 * MOBILE (<768px)--------------------------------------------------------------
@@ -2022,30 +2014,29 @@ i { /* use !important to prevent issues with browser extensions that change font
   .container .col-lg-11 { width: 1045px; }
   .container .col-lg-12 { width: 1140px; } }
 
-.gnb-top { display: flex; align-items: center; justify-content: space-between; position: relative; margin: 10px 0; }
+.gnb { min-width: 350px; }
 
-.gnb-button-language { display: flex; align-items: center; justify-content: center; order: 2; width: 40px; height: 32px; font-family: 'Montserrat', sans-serif; font-size: 7px; line-height: 14px; color: #fff; text-align: center; border: 1px solid #dfe0e8; border-radius: 13px; }
+.gnb-menu { display: flex; align-items: center; justify-content: space-between; position: relative; margin: 10px 0; }
+
+.gnb-button-language { display: flex; align-items: center; justify-content: center; order: 2; width: 44px; height: 44px; font-family: 'Montserrat', sans-serif; font-size: 14px; line-height: 28px; color: #fff; text-align: center; border: 1px solid #dfe0e8; border-radius: 13px; }
 
 .gnb-button-language i { font-size: 14px; }
 
-.gnb-button-menu { order: 1; width: 32px; height: 32px; }
+.gnb-button-menu { order: 1; width: 44px; height: 44px; }
 
-.gnb-button-menu i { font-size: 30px; color: #fff; }
+.gnb-button-menu i { font-size: 43px; color: #fff; }
 
 .gnb .logo { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
 .gnb .logo a { display: block; }
 
-.gnb .logo img { display: block; width: auto; height: 32px; }
+.gnb .logo img { display: block; width: auto; height: 45px; }
 
-@media screen and (min-width: 768px) { .gnb .logo { position: static; transform: none; }
-  .gnb-button-menu { order: 2; }
-  .gnb-button-language { order: 1; margin-right: -50px; } }
+@media screen and (min-width: 768px) { .gnb .logo { position: static; margin-right: 10px; transform: none; }
+  .gnb-button-wrap { display: flex; align-items: center; justify-content: center; }
+  .gnb-button-menu { order: 2; } }
 
-@media screen and (min-width: 768px) and (min-width: 1200px) { .gnb .logo img { height: 45px; }
-  .gnb-button-menu { order: 2; width: 44px; height: 44px; }
-  .gnb-button-menu i { font-size: 43px; color: #fff; }
-  .gnb-button-language { display: flex; align-items: center; justify-content: center; order: 1; width: 80px; height: 44px; padding-left: 8px; margin-right: -110px; font-size: 14px; line-height: 28px; border-radius: 26px; }
-  .gnb-button-language i { font-size: 28px; } }
+@media screen and (min-width: 1200px) { .gnb-button-language { order: 1; width: 80px; margin-right: 10px; border-radius: 26px; }
+  .gnb-button-language i { margin-left: 10px; } }
 
 /*# sourceMappingURL=styles.css.map */

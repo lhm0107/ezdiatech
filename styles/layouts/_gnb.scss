@@ -1,5 +1,7 @@
 .gnb {
-	&-top {
+	min-width: 350px;
+
+	&-menu {
 		@include flexbox(between);
 		position: relative;
 		margin: 10px 0;
@@ -8,11 +10,11 @@
 	&-button-language {
 		@include flexbox;
 		order: 2;
-		width: 40px;
-		height: 32px;
+		width: 44px;
+		height: 44px;
 		font-family: 'Montserrat', sans-serif;
-		font-size: 7px;
-		line-height: 14px;
+		font-size: 14px;
+		line-height: 28px;
 		color: $white;
 		text-align: center;
 		border: 1px solid $border;
@@ -25,11 +27,11 @@
 
 	&-button-menu {
 		order: 1;
-		width: 32px;
-		height: 32px;
+		width: 44px;
+		height: 44px;
 
 		i {
-			font-size: 30px;
+			font-size: 43px;
 			color: $white;
 		}
 	}
@@ -43,57 +45,35 @@
 		img {
 			display: block;
 			width: auto;
-			height: 32px;
+			height: 45px;
 		}
 	}
 
 	@include responsive(T) {
 		.logo {
 			position: static;
+			margin-right: 10px;
 			transform: none;
+		}
+
+		&-button-wrap {
+			@include flexbox;
 		}
 
 		&-button-menu {
 			order: 2;
 		}
+	}
 
+	@include responsive(D) {
 		&-button-language {
 			order: 1;
-			margin-right: -50px;
-		}
+			width: 80px;
+			margin-right: 10px;
+			border-radius: 26px;
 
-		@include responsive(D) {
-			.logo {
-				img {
-					height: 45px;
-				}
-			}
-
-			&-button-menu {
-				order: 2;
-				width: 44px;
-				height: 44px;
-
-				i {
-					font-size: 43px;
-					color: $white;
-				}
-			}
-
-			&-button-language {
-				@include flexbox;
-				order: 1;
-				width: 80px;
-				height: 44px;
-				padding-left: 8px;
-				margin-right: -110px;
-				font-size: 14px;
-				line-height: 28px;
-				border-radius: 26px;
-
-				i {
-					font-size: 28px;
-				}
+			i {
+				margin-left: 10px;
 			}
 		}
 	}
