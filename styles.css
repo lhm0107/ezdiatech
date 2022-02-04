@@ -1947,6 +1947,36 @@ i { /* use !important to prevent issues with browser extensions that change font
 @media screen and (min-width: 1200px) { .gnb-nav-item { margin-right: 80px; }
   .gnb-nav-item:last-child { margin-right: 0; } }
 
+.drawer-menu-list.is-open .ic-chevron { transform: rotate(180deg); }
+
+.drawer-menu-list.is-open .drawer-menu-term, .drawer-menu-list.is-open .drawer-menu-item { max-height: 500px; }
+
+.drawer-menu-list.is-open .drawer-menu-term { margin: 10px 0; }
+
+.drawer-menu-list.is-open .drawer-menu-item { margin-bottom: 5px; }
+
+.drawer-menu-list.is-open .drawer-menu-item:last-child { margin-bottom: 0; }
+
+.drawer-menu-button { font-size: 32px; line-height: 48px; color: #dfe0e8; font-family: "Poppins", sans-serif; letter-spacing: 0; max-width: 300px; font-weight: 600; text-align: left; }
+
+.drawer-menu-button .ic-chevron { display: inline-block; transition: transform 200ms ease-in-out; }
+
+.drawer-menu-term, .drawer-menu-item { max-height: 0; overflow: hidden; transition: max-height 100ms ease-in-out; }
+
+.drawer-menu-term { font-size: 18px; line-height: 30px; font-weight: 700; }
+
+.drawer-menu-item a { font-size: 16px; line-height: 28px; color: #5e6074; display: block; }
+
+@media screen and (min-width: 1200px) { .drawer-menu { display: flex; align-items: flex-start; justify-content: space-around; padding-top: 200px; position: relative; }
+  .drawer-menu-list::before { position: absolute; height: 100vh; border: 1px solid #dfe0e8; content: ''; }
+  .drawer-menu-list .ic-chevron { display: none; }
+  .drawer-menu-button { margin-bottom: 29px; }
+  .drawer-menu-term, .drawer-menu-item { max-height: 500px; }
+  .drawer-menu-term:not(:first-of-type) { margin-top: 50px !important; }
+  .drawer-menu-item { margin-bottom: 12px; }
+  .drawer-menu-item:first-of-type { margin-top: 20px; }
+  .drawer-menu-item:last-of-type { margin-bottom: 0px; } }
+
 /*
 * MOBILE (<768px)--------------------------------------------------------------
 * fixture-----------------------------------------------sm
@@ -2038,5 +2068,17 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 @media screen and (min-width: 1200px) { .gnb-button-language { order: 1; width: 80px; margin-right: 10px; border-radius: 26px; }
   .gnb-button-language i { margin-left: 10px; } }
+
+body { background-color: green; }
+
+.sidebar { width: 300px; padding: 20px; background-color: #fff; }
+
+.sidebar-logo { display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+
+.sidebar-logo a { display: block; }
+
+.sidebar-logo img { display: block; width: auto; height: 45px; }
+
+@media screen and (min-width: 1200px) { .sidebar { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; } }
 
 /*# sourceMappingURL=styles.css.map */

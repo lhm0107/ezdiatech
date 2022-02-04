@@ -1,0 +1,32 @@
+body {
+	background-color: green;
+}
+
+.sidebar {
+	width: 300px;
+	padding: 20px;
+	background-color: $white;
+
+	&-logo {
+		@include flexbox;
+		margin-bottom: 20px;
+
+		a {
+			display: block;
+		}
+
+		img {
+			display: block;
+			width: auto;
+			height: 45px;
+		}
+	}
+
+	@include responsive(D) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+	}
+}
