@@ -19,6 +19,7 @@
 		height: 44px;
 		font-family: 'Montserrat', sans-serif;
 		font-size: 14px;
+		font-weight: 600;
 		line-height: 28px;
 		color: $white;
 		text-align: center;
@@ -56,6 +57,36 @@
 	}
 
 	@include responsive(T) {
+		height: 100px;
+
+		&-wrap {
+			@include position-center;
+			width: 100%;
+		}
+
+		&.is-open {
+			background-color: $white;
+			border-bottom: 1px solid $border;
+
+			.gnb-button-language,
+			.gnb-button-menu i,
+			.gnb-nav-item a {
+				color: $primary;
+			}
+
+			.logo-white {
+				img {
+					display: none;
+				}
+			}
+
+			.logo-black {
+				img {
+					display: block;
+				}
+			}
+		}
+
 		.logo {
 			position: static;
 			margin-right: 10px;
@@ -78,36 +109,6 @@
 	}
 
 	@include responsive(D) {
-		height: 100px;
-
-		&.is-open {
-			background-color: $white;
-			border-bottom: 1px solid $border;
-
-			.gnb-button-language,
-			.gnb-button-menu i,
-			.gnb-nav a {
-				color: $primary;
-			}
-
-			.logo-white {
-				img {
-					display: none;
-				}
-			}
-
-			.logo-black {
-				img {
-					display: block;
-				}
-			}
-		}
-
-		&-wrap {
-			@include position-center;
-			width: 100%;
-		}
-
 		&-button-language {
 			order: 1;
 			width: 80px;

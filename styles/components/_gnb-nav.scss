@@ -7,6 +7,7 @@
 
 		a {
 			@include text-style(16, $white, $font-sub);
+			font-weight: 600;
 		}
 
 		&-item {
