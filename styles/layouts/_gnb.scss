@@ -1,4 +1,9 @@
 .gnb {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $gnb-level;
+	width: 100vw;
 	min-width: 350px;
 
 	&-menu {
@@ -38,12 +43,13 @@
 
 	.logo {
 		@include position-center;
-		a {
+
+		a,
+		img {
 			display: block;
 		}
 
 		img {
-			display: block;
 			width: auto;
 			height: 45px;
 		}
@@ -54,6 +60,12 @@
 			position: static;
 			margin-right: 10px;
 			transform: none;
+
+			&-black {
+				img {
+					display: none;
+				}
+			}
 		}
 
 		&-button-wrap {
@@ -66,6 +78,36 @@
 	}
 
 	@include responsive(D) {
+		height: 100px;
+
+		&.is-open {
+			background-color: $white;
+			border-bottom: 1px solid $border;
+
+			.gnb-button-language,
+			.gnb-button-menu i,
+			.gnb-nav a {
+				color: $primary;
+			}
+
+			.logo-white {
+				img {
+					display: none;
+				}
+			}
+
+			.logo-black {
+				img {
+					display: block;
+				}
+			}
+		}
+
+		&-wrap {
+			@include position-center;
+			width: 100%;
+		}
+
 		&-button-language {
 			order: 1;
 			width: 80px;

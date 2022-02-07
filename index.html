@@ -18,40 +18,48 @@
 		<link rel="stylesheet" href="./styles.css" />
 	</head>
 	<body>
-		<header class="gnb" style="background-color: green">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="gnb-menu">
-							<h1 class="logo">
-								<a href="/"><img src="./assets/images/logo_white 170 X 45.png" alt="이지다이아텍" /></a>
-							</h1>
+		<header class="gnb is-open">
+			<div class="gnb-wrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="gnb-menu">
+								<h1 class="logo">
+									<a class="logo-white" href="/"><img src="./assets/images/logo_white 170 X 45.png" alt="이지다이아텍" /></a>
+									<a class="logo-black lg-only" href="/"><img src="./assets/images/logo_black 170 X 45.png" alt="이지다이아텍" /></a>
+								</h1>
 
-							<nav class="gnb-nav sm-hidden">
-								<h2 class="visually-hidden">메뉴</h2>
-								<ul class="gnb-nav-list">
-									<li class="gnb-nav-item"><a href="/">VEUS</a></li>
-									<li class="gnb-nav-item"><a href="/">RAPID</a></li>
-									<li class="gnb-nav-item"><a href="/">COMPANY</a></li>
-									<li class="gnb-nav-item"><a href="/">NEWS</a></li>
-									<li class="gnb-nav-item"><a href="/">CAREERS</a></li>
-								</ul>
-							</nav>
+								<nav class="gnb-nav sm-hidden">
+									<h2 class="visually-hidden">메뉴</h2>
+									<ul class="gnb-nav-list">
+										<li class="gnb-nav-item">
+											<a href="/">VEUS</a>
+											<ul>
+												<li></li>
+											</ul>
+										</li>
+										<li class="gnb-nav-item"><a href="/">RAPID</a></li>
+										<li class="gnb-nav-item"><a href="/">COMPANY</a></li>
+										<li class="gnb-nav-item"><a href="/">NEWS</a></li>
+										<li class="gnb-nav-item"><a href="/">CAREERS</a></li>
+									</ul>
+								</nav>
 
-							<div class="gnb-button-wrap">
-								<button class="gnb-button-language sm-hidden" aria-label="언어선택 버튼">
+								<div class="gnb-button-wrap">
+									<button class="gnb-button-language sm-hidden" aria-label="언어선택 버튼">
+										KO
+										<i class="ic-chevron" aria-hidden></i>
+									</button>
+
+									<button class="gnb-button-menu" type="button" aria-label="메뉴 열기 버튼">
+										<i class="ic-hambuger"></i>
+									</button>
+								</div>
+								<button class="gnb-button-language sm-only" aria-label="언어선택 버튼">
 									KO
 									<i class="ic-chevron" aria-hidden></i>
 								</button>
-
-								<button class="gnb-button-menu" type="button" aria-label="메뉴 열기 버튼">
-									<i class="ic-hambuger"></i>
-								</button>
 							</div>
-							<button class="gnb-button-language sm-only" aria-label="언어선택 버튼">
-								KO
-								<i class="ic-chevron" aria-hidden></i>
-							</button>
 						</div>
 					</div>
 				</div>
@@ -63,6 +71,9 @@
 				<a href="/">
 					<img src="./assets/images/logo_black 170 X 45.png" />
 				</a>
+				<button class="sidebar-close-button">
+					<i class="ic-close"></i>
+				</button>
 			</h2>
 			<nav class="sidebar-nav">
 				<h3 class="visually-hidden">메뉴</h3>
@@ -157,5 +168,7 @@
 				</div>
 			</nav>
 		</aside>
+
+		<div class="overlay" aria-hidden></div>
 	</body>
 </html>

@@ -1,18 +1,30 @@
-body {
-	background-color: green;
-}
-
 .sidebar {
-	width: 300px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $sidebar-level;
+	display: none;
+	width: 70%;
+	height: 100vh;
+	min-width: 300px;
 	padding: 20px;
+	overflow-y: auto;
 	background-color: $white;
 
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
 	&-logo {
-		@include flexbox;
-		margin-bottom: 20px;
+		@include flexbox(end);
+		position: fixed;
+		top: 0;
+		padding: 20px;
+		background-color: $white;
 
 		a {
 			display: block;
+			margin-right: 20px;
 		}
 
 		img {
@@ -22,11 +34,33 @@ body {
 		}
 	}
 
+	&-close-button {
+		width: 44px;
+		height: 44px;
+		font-size: 20px;
+		color: $primary;
+	}
+
+	@include responsive(T) {
+	}
+
 	@include responsive(D) {
 		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100vw;
 		height: 100vh;
+
+		&-logo {
+			@include position-center-x;
+			@include flexbox;
+			width: 100%;
+			max-width: 1300px;
+		}
+
+		&-close-button {
+			position: absolute;
+			right: 0;
+		}
 	}
 }

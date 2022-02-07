@@ -1,4 +1,6 @@
 .drawer-menu {
+	margin-top: 70px;
+
 	&-list {
 		&.is-open {
 			.ic-chevron {
@@ -57,17 +59,23 @@
 
 	@include responsive(D) {
 		@include flexbox(around, start);
-		padding-top: 200px;
 		position: relative;
+		left: 50%;
+		max-width: 1400px;
+		transform: translateX(-50%);
 
-		&-list::before {
+		&-list:not(:first-child)::before {
 			position: absolute;
-			height: 100vh;
+			top: -100px;
+			height: 150vh;
+			margin-left: -40px;
 			border: 1px solid $border;
 			content: '';
 		}
 
 		&-list {
+			margin-top: 150px;
+
 			.ic-chevron {
 				display: none;
 			}
@@ -95,7 +103,7 @@
 		}
 
 		&-item:last-of-type {
-			margin-bottom: 0px;
+			margin-bottom: 0;
 		}
 	}
 }
