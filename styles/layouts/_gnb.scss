@@ -57,11 +57,12 @@
 	}
 
 	@include responsive(T) {
-		height: 100px;
-
 		&-wrap {
-			@include position-center;
 			width: 100%;
+		}
+
+		&-menu {
+			margin: 0;
 		}
 
 		&.is-open {
