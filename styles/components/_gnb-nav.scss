@@ -1,12 +1,21 @@
 .gnb-nav {
+	position: relative;
+	height: 100px;
+
 	@include responsive(T) {
+		&-wrap {
+			@include position-center-x;
+		}
+
 		&-list {
-			@include flexbox;
+			@include flexbox(center, start);
 			margin-right: 10px;
+			height: 100px;
+			overflow: hidden;
 		}
 
 		&-item {
-			a {
+			h3 {
 				@include text-style(16, $white, $font-sub);
 				position: relative;
 				display: inline-block;
@@ -15,7 +24,7 @@
 				line-height: 100px;
 			}
 
-			&:hover a::after {
+			&:hover h3::after {
 				position: absolute;
 				bottom: -2px;
 				left: 0;
@@ -23,6 +32,23 @@
 				height: 3px;
 				background-color: $blue;
 				content: '';
+			}
+		}
+
+		.sub-list {
+			margin-top: 40px;
+			.sub-item {
+				margin-bottom: 11px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				a {
+					@include text-style(16, $secondary);
+					display: block;
+					text-align: center;
+				}
 			}
 		}
 	}
@@ -33,7 +59,7 @@
 		}
 
 		&-item {
-			a {
+			h3 {
 				padding: 0 40px;
 			}
 		}
