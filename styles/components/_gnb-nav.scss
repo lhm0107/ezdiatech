@@ -1,17 +1,25 @@
 .gnb-nav {
-	position: relative;
-	height: 100px;
-
 	@include responsive(T) {
+		position: relative;
+		z-index: $gnb-nav-level;
+		width: 100%;
+		height: 100px;
+
 		&-wrap {
 			@include position-center-x;
+			top: -1px;
 		}
 
 		&-list {
 			@include flexbox(center, start);
-			margin-right: 10px;
 			height: 100px;
-			overflow: hidden;
+			margin-right: 10px;
+
+			&.is-open {
+				.sub-list {
+					max-height: 600px;
+				}
+			}
 		}
 
 		&-item {
@@ -22,21 +30,20 @@
 				padding: 0 15px;
 				font-weight: 600;
 				line-height: 100px;
-			}
+				border-bottom: 3px solid transparent;
 
-			&:hover h3::after {
-				position: absolute;
-				bottom: -2px;
-				left: 0;
-				width: 100%;
-				height: 3px;
-				background-color: $blue;
-				content: '';
+				&:active {
+					border-bottom: 3px solid $blue;
+				}
 			}
 		}
 
 		.sub-list {
-			margin-top: 40px;
+			max-height: 0;
+			padding-top: 40px;
+			overflow: hidden;
+			transition: max-height 200ms ease-in-out;
+
 			.sub-item {
 				margin-bottom: 11px;
 
@@ -48,6 +55,10 @@
 					@include text-style(16, $secondary);
 					display: block;
 					text-align: center;
+
+					&:active {
+						color: $blue;
+					}
 				}
 			}
 		}
@@ -61,6 +72,16 @@
 		&-item {
 			h3 {
 				padding: 0 40px;
+
+				&:hover {
+					border-bottom: 3px solid $blue;
+				}
+			}
+
+			.sub-item {
+				a:hover {
+					color: $blue;
+				}
 			}
 		}
 	}

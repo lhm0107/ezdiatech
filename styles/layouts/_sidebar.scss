@@ -1,18 +1,20 @@
 .sidebar {
+	@include no-scrollbar;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: $sidebar-level;
-	display: none;
 	width: 70%;
 	height: 100vh;
 	min-width: 300px;
 	padding: 20px;
 	overflow-y: auto;
 	background-color: $white;
+	transform: translateX(-100%);
+	transition: transform 200ms ease-in-out;
 
-	&::-webkit-scrollbar {
-		display: none;
+	&.is-open {
+		transform: translateX(0);
 	}
 
 	&-logo {
@@ -42,6 +44,7 @@
 	}
 
 	@include responsive(T) {
+		width: 82%;
 	}
 
 	@include responsive(D) {
