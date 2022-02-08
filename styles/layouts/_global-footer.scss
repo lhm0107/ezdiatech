@@ -1,0 +1,71 @@
+.global-footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	background-color: #000;
+
+	&-top {
+		padding-top: 10px;
+		font-size: 10px;
+	}
+
+	&-title {
+		@include inline-flexbox(between);
+		width: 100%;
+		margin-bottom: 10px;
+
+		img {
+			height: 24px;
+			opacity: 60%;
+		}
+	}
+
+	&-help {
+		@include flexbox(between);
+		a {
+			font-size: 10px;
+			color: $tertiary;
+
+			&:first-child::after {
+				margin: 0 15px;
+				content: '|';
+			}
+		}
+	}
+
+	&-address {
+		margin-bottom: 10px;
+
+		h3,
+		address,
+		span {
+			margin-bottom: 5px;
+			color: $border;
+		}
+
+		address,
+		a,
+		p {
+			color: $secondary;
+		}
+
+		span,
+		a,
+		p {
+			display: inline;
+			font-family: $font-sub;
+		}
+	}
+
+	&-bottom {
+		@include flexbox;
+		padding: 5px 0;
+		background-color: rgba($tertiary, 0.1);
+
+		span {
+			font-size: 8px;
+			color: $tertiary;
+		}
+	}
+}
