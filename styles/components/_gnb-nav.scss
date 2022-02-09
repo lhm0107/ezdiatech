@@ -24,7 +24,7 @@
 
 		&-item {
 			h3 {
-				@include text-style(16, $white, $font-sub);
+				@include text-style(16, $primary, $font-sub);
 				position: relative;
 				display: inline-block;
 				padding: 0 15px;

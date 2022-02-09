@@ -1,0 +1,144 @@
+.global-header {
+	.gnb {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: $gnb-level;
+		width: 100vw;
+		min-width: 350px;
+
+		&-menu {
+			@include flexbox(between);
+			position: relative;
+			margin: 10px 0;
+
+			.logo {
+				@include position-center;
+
+				a,
+				img {
+					display: block;
+				}
+
+				img {
+					width: auto;
+					height: 45px;
+				}
+			}
+		}
+
+		&-button-menu {
+			order: 1;
+			width: 44px;
+			height: 44px;
+
+			i {
+				font-size: 43px;
+				color: $white;
+			}
+		}
+
+		&-button-language {
+			@include flexbox;
+			order: 2;
+			width: 44px;
+			height: 44px;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 28px;
+			color: $white;
+			text-align: center;
+			border: 1px solid $border;
+			border-radius: 13px;
+
+			i {
+				font-size: 14px;
+			}
+		}
+
+		@include responsive(T) {
+			width: 100%;
+			background-color: $white;
+
+			&::after {
+				display: block;
+				height: 1px;
+				background-color: $border;
+				content: '';
+			}
+
+			.logo {
+				position: static;
+				margin-right: 10px;
+				transform: none;
+
+				&-white {
+					img {
+						display: none;
+					}
+				}
+
+				&-black {
+					display: block;
+				}
+			}
+
+			&-button-language,
+			&-button-menu i {
+				color: $primary;
+			}
+
+			&-menu {
+				margin: 0;
+			}
+
+			&.is-colse {
+				background-color: transparent;
+
+				&::after {
+					display: none;
+				}
+
+				.gnb-button-language,
+				.gnb-button-menu i,
+				.gnb-nav-item h3 {
+					color: $white;
+				}
+
+				.logo-white {
+					img {
+						display: block;
+					}
+				}
+
+				.logo-black {
+					img {
+						display: none;
+					}
+				}
+			}
+
+			&-button-wrap {
+				@include flexbox;
+			}
+
+			&-button-menu {
+				order: 2;
+			}
+		}
+
+		@include responsive(D) {
+			&-button-language {
+				order: 1;
+				width: 80px;
+				margin-right: 10px;
+				border-radius: 26px;
+
+				i {
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}
