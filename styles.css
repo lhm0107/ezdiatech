@@ -1989,6 +1989,8 @@ i { /* use !important to prevent issues with browser extensions that change font
   .drawer-menu-item:first-of-type { margin-top: 20px; }
   .drawer-menu-item:last-of-type { margin-bottom: 0; } }
 
+.intro-nav-button { display: inline-flex; align-items: center; justify-content: space-between; width: 100%; font-family: "Poppins", sans-serif; font-size: 22px; font-weight: 500; letter-spacing: 0.15em; }
+
 /*
 * MOBILE (<768px)--------------------------------------------------------------
 * fixture-----------------------------------------------sm
@@ -2092,7 +2094,7 @@ i { /* use !important to prevent issues with browser extensions that change font
 @media screen and (min-width: 1200px) { .global-header .gnb-button-language { order: 1; width: 80px; margin-right: 10px; border-radius: 26px; }
   .global-header .gnb-button-language i { margin-left: 10px; } }
 
-.global-footer { position: fixed; bottom: 0; left: 0; z-index: 70; width: 100vw; font-size: 10px; background-color: #000; }
+.global-footer { bottom: 0; left: 0; z-index: 70; width: 100vw; font-size: 10px; background-color: #000; }
 
 .global-footer-top { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; }
 
@@ -2149,5 +2151,18 @@ i { /* use !important to prevent issues with browser extensions that change font
 .overlay { position: fixed; top: 0; left: 0; z-index: 100; width: 100%; height: 100vh; background-color: rgba(12, 14, 28, 0.5); opacity: 0; visibility: hidden; transition: opacity 300ms ease-in-out, visibility 300ms; }
 
 .overlay.is-active { opacity: 1; visibility: visible; }
+
+.intro { position: relative; width: 100vw; height: 100vh; background-image: url("./assets/images/img-index-01-mobile.jpg"); background-repeat: no-repeat; background-size: cover; }
+
+.intro-box { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; }
+
+.intro-box-title { margin-bottom: 10px; font-family: "Poppins", sans-serif; font-size: 34px; font-weight: 500; line-height: 42px; color: #fff; text-align: center; }
+
+.intro-box-desc { font-size: 12px; line-height: 20px; color: #fff; text-align: center; }
+
+@media screen and (min-width: 768px) { .intro { background-image: url("./assets/images/img-index-01-mobile.jpg"); background-size: cover; }
+  .intro-box-title { font-size: 70px; line-height: 80px; }
+  .intro-box-desc { font-size: 20px; line-height: 32px; }
+  .intro-nav { position: absolute; left: 50%; transform: translateX(-50%); bottom: 50px; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,52 @@
+.intro {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-image: url('./assets/images/img-index-01-mobile.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&-box {
+		@include position-center;
+		width: 90%;
+
+		&-title {
+			margin-bottom: 10px;
+			font-family: $font-sub;
+			font-size: 34px;
+			font-weight: 500;
+			line-height: 42px;
+			color: $white;
+			text-align: center;
+		}
+
+		&-desc {
+			font-size: 12px;
+			line-height: 20px;
+			color: $white;
+			text-align: center;
+		}
+	}
+
+	@include responsive(T) {
+		background-image: url('./assets/images/img-index-01-mobile.jpg');
+		background-size: cover;
+
+		&-box {
+			&-title {
+				font-size: 70px;
+				line-height: 80px;
+			}
+
+			&-desc {
+				font-size: 20px;
+				line-height: 32px;
+			}
+		}
+
+		&-nav {
+			@include position-center-x;
+			bottom: 50px;
+		}
+	}
+}

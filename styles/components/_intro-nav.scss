@@ -1,0 +1,10 @@
+.intro-nav {
+	&-button {
+		@include inline-flexbox(between);
+		width: 100%;
+		font-family: $font-sub;
+		font-size: 22px;
+		font-weight: 500;
+		letter-spacing: 0.15em;
+	}
+}
