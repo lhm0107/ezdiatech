@@ -2,19 +2,17 @@
 	position: fixed;
 	bottom: 0;
 	left: 0;
+	z-index: $global-footer-level;
 	width: 100vw;
+	font-size: 10px;
 	background-color: #000;
 
 	&-top {
-		padding-top: 10px;
-		font-size: 10px;
+		@include flexbox(between);
+		padding: 10px 0;
 	}
 
 	&-title {
-		@include inline-flexbox(between);
-		width: 100%;
-		margin-bottom: 10px;
-
 		img {
 			height: 24px;
 			opacity: 60%;
@@ -22,13 +20,11 @@
 	}
 
 	&-help {
-		@include flexbox(between);
 		a {
-			font-size: 10px;
 			color: $tertiary;
 
 			&:first-child::after {
-				margin: 0 15px;
+				margin: 0 16px;
 				content: '|';
 			}
 		}
@@ -40,7 +36,7 @@
 		h3,
 		address,
 		span {
-			margin-bottom: 5px;
+			margin-bottom: 3px;
 			color: $border;
 		}
 
@@ -56,6 +52,10 @@
 			display: inline;
 			font-family: $font-sub;
 		}
+
+		span {
+			margin-right: 3px;
+		}
 	}
 
 	&-bottom {
@@ -66,6 +66,52 @@
 		span {
 			font-size: 8px;
 			color: $tertiary;
+		}
+	}
+
+	@include responsive(T) {
+		&-top {
+			font-size: 14px;
+		}
+
+		&-title {
+			img {
+				height: 34px;
+			}
+		}
+
+		&-address {
+			address {
+				display: inline;
+			}
+		}
+
+		&-help {
+			a {
+				font-size: 13px;
+			}
+		}
+
+		&-bottom {
+			span {
+				font-size: 12px;
+			}
+		}
+	}
+
+	@include responsive(D) {
+		&-wrap {
+			@include flexbox(between);
+			padding: 30px 0;
+
+			.global-footer-top {
+				order: 3;
+			}
+		}
+
+		&-bottom {
+			@include flexbox(around);
+			padding: 16px 0;
 		}
 	}
 }
