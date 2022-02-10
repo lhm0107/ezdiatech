@@ -1,14 +1,7 @@
 .intro {
-	position: relative;
-	width: 100vw;
-	height: 100vh;
-	background-image: url('./assets/images/img-index-01-mobile.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-
 	&-box {
 		@include position-center;
-		width: 90%;
+		width: 100%;
 
 		&-title {
 			margin-bottom: 10px;
@@ -29,9 +22,6 @@
 	}
 
 	@include responsive(T) {
-		background-image: url('./assets/images/img-index-01-mobile.jpg');
-		background-size: cover;
-
 		&-box {
 			&-title {
 				font-size: 70px;
@@ -46,7 +36,6 @@
 
 		&-nav {
 			@include position-center-x;
-			bottom: 50px;
 		}
 	}
 }

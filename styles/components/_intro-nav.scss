@@ -1,10 +1,47 @@
 .intro-nav {
+	@include flexbox(around, start);
+	bottom: 50px;
+	flex-wrap: wrap;
+	width: 90%;
+
 	&-button {
-		@include inline-flexbox(between);
-		width: 100%;
-		font-family: $font-sub;
-		font-size: 22px;
-		font-weight: 500;
-		letter-spacing: 0.15em;
+		@include flexbox(start);
+		position: relative;
+		padding-right: 22px;
+		flex-grow: 1;
+
+		// &:nth-child(2n + 1) {
+		// 	margin-right: 20px;
+		// }
+
+		.button-item {
+			margin-right: 22px;
+
+			&-title {
+				@include text-style(24, $white, $font-sub);
+				font-weight: 500;
+				white-space: nowrap;
+			}
+
+			&-desc {
+				@include text-style(14, $white);
+				white-space: nowrap;
+			}
+
+			&::after {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				display: inline-block;
+				width: 42px;
+				height: 42px;
+				line-height: 42px;
+				color: $white;
+				text-align: center;
+				border: 1px solid $white;
+				border-radius: 50%;
+				content: '+';
+			}
+		}
 	}
 }

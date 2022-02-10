@@ -1,10 +1,11 @@
 .global-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $global-header-level;
+	width: 100%;
+
 	.gnb {
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: $gnb-level;
-		width: 100vw;
 		min-width: 350px;
 
 		&-menu {

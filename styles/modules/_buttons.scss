@@ -18,6 +18,21 @@
 	}
 }
 
+.button-plus-32 {
+	display: block;
+	@include flexbox;
+	width: 32px;
+	height: 32px;
+	border: 1px solid $white;
+	border-radius: 50%;
+
+	i {
+		font-family: xeicon;
+		font-size: 11px;
+		color: $white;
+	}
+}
+
 .btn-contact {
 	@extend %btn-base;
 	@include text-style(24, $white);
