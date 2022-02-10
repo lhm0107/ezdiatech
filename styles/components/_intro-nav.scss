@@ -1,38 +1,61 @@
 .intro-nav {
-	@include flexbox(around, start);
-	bottom: 50px;
-	flex-wrap: wrap;
-	width: 90%;
+	@include column-flexbox;
 
 	&-button {
-		@include flexbox(start);
 		position: relative;
-		padding-right: 22px;
-		flex-grow: 1;
+		width: 100%;
+		padding-right: 55px;
+		padding-bottom: 5px;
+		margin-bottom: 10px;
+		border-bottom: 1px solid $border;
 
-		// &:nth-child(2n + 1) {
-		// 	margin-right: 20px;
-		// }
+		&::after {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			display: block;
+			width: 42px;
+			height: 42px;
+			line-height: 42px;
+			color: $white;
+			text-align: center;
+			border: 1px solid $white;
+			border-radius: 50%;
+			content: '+';
+		}
+	}
 
-		.button-item {
-			margin-right: 22px;
+	&-title {
+		@include text-style(20, $white, $font-sub);
+		font-weight: 500;
+		white-space: nowrap;
+	}
 
-			&-title {
-				@include text-style(24, $white, $font-sub);
-				font-weight: 500;
-				white-space: nowrap;
-			}
+	&-desc {
+		font-size: 12px;
+		color: $white;
+		white-space: nowrap;
+	}
 
-			&-desc {
-				@include text-style(14, $white);
-				white-space: nowrap;
-			}
+	@include responsive(T) {
+		@include flexbox(between);
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		&-button {
+			position: relative;
+			width: 100%;
+			padding-right: 55px;
+
+			padding-bottom: 0;
+			margin-bottom: 0;
+			border-bottom: 0;
 
 			&::after {
 				position: absolute;
 				right: 0;
 				bottom: 0;
-				display: inline-block;
+				display: block;
 				width: 42px;
 				height: 42px;
 				line-height: 42px;
@@ -41,6 +64,39 @@
 				border: 1px solid $white;
 				border-radius: 50%;
 				content: '+';
+			}
+
+			&:nth-child(2n + 1) {
+				width: 40%;
+			}
+
+			&:not(:nth-child(2n + 1)) {
+				width: 315px;
+			}
+		}
+
+		&-title {
+			@include text-style(20, $white, $font-sub);
+			font-weight: 500;
+			white-space: nowrap;
+		}
+
+		&-desc {
+			font-size: 12px;
+			color: $white;
+			white-space: nowrap;
+		}
+	}
+
+	@include responsive(D) {
+		@include flexbox(between);
+		flex-wrap: nowrap;
+
+		&-button {
+			width: auto !important;
+
+			&:last-child {
+				margin-right: 0;
 			}
 		}
 	}

@@ -1,8 +1,9 @@
 .intro {
-	&-box {
-		@include position-center;
-		width: 100%;
+	@include column-flexbox(between);
+	height: 100vh;
+	padding-top: 150px;
 
+	&-box {
 		&-title {
 			margin-bottom: 10px;
 			font-family: $font-sub;
@@ -21,7 +22,13 @@
 		}
 	}
 
+	&-nav {
+		margin-bottom: 50px;
+	}
+
 	@include responsive(T) {
+		padding-top: 300px;
+
 		&-box {
 			&-title {
 				font-size: 70px;
@@ -35,7 +42,14 @@
 		}
 
 		&-nav {
-			@include position-center-x;
+			width: 70%;
+			margin-bottom: 100px;
+		}
+	}
+
+	@include responsive(D) {
+		&-nav {
+			min-width: 1150px;
 		}
 	}
 }

@@ -1991,17 +1991,27 @@ i { /* use !important to prevent issues with browser extensions that change font
   .drawer-menu-item:first-of-type { margin-top: 20px; }
   .drawer-menu-item:last-of-type { margin-bottom: 0; } }
 
-.intro-nav { display: flex; align-items: flex-start; justify-content: space-around; bottom: 50px; flex-wrap: wrap; width: 90%; }
+.intro-nav { display: flex; flex-direction: column; align-items: center; justify-content: center; }
 
-.intro-nav-button { display: flex; align-items: center; justify-content: flex-start; position: relative; padding-right: 22px; flex-grow: 1; }
+.intro-nav-button { position: relative; width: 100%; padding-right: 55px; padding-bottom: 5px; margin-bottom: 10px; border-bottom: 1px solid #dfe0e8; }
 
-.intro-nav-button .button-item { margin-right: 22px; }
+.intro-nav-button::after { position: absolute; right: 0; bottom: 0; display: block; width: 42px; height: 42px; line-height: 42px; color: #fff; text-align: center; border: 1px solid #fff; border-radius: 50%; content: '+'; }
 
-.intro-nav-button .button-item-title { font-size: 24px; line-height: 40px; color: #fff; font-family: "Poppins", sans-serif; letter-spacing: 0; font-weight: 500; white-space: nowrap; }
+.intro-nav-title { font-size: 20px; line-height: 32px; color: #fff; font-family: "Poppins", sans-serif; letter-spacing: 0; font-weight: 500; white-space: nowrap; }
 
-.intro-nav-button .button-item-desc { font-size: 14px; line-height: 24px; color: #fff; white-space: nowrap; }
+.intro-nav-desc { font-size: 12px; color: #fff; white-space: nowrap; }
 
-.intro-nav-button .button-item::after { position: absolute; right: 0; bottom: 0; display: inline-block; width: 42px; height: 42px; line-height: 42px; color: #fff; text-align: center; border: 1px solid #fff; border-radius: 50%; content: '+'; }
+@media screen and (min-width: 768px) { .intro-nav { display: flex; align-items: center; justify-content: space-between; flex-direction: row; flex-wrap: wrap; }
+  .intro-nav-button { position: relative; width: 100%; padding-right: 55px; padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
+  .intro-nav-button::after { position: absolute; right: 0; bottom: 0; display: block; width: 42px; height: 42px; line-height: 42px; color: #fff; text-align: center; border: 1px solid #fff; border-radius: 50%; content: '+'; }
+  .intro-nav-button:nth-child(2n + 1) { width: 40%; }
+  .intro-nav-button:not(:nth-child(2n + 1)) { width: 315px; }
+  .intro-nav-title { font-size: 20px; line-height: 32px; color: #fff; font-family: "Poppins", sans-serif; letter-spacing: 0; font-weight: 500; white-space: nowrap; }
+  .intro-nav-desc { font-size: 12px; color: #fff; white-space: nowrap; } }
+
+@media screen and (min-width: 1200px) { .intro-nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: nowrap; }
+  .intro-nav-button { width: auto !important; }
+  .intro-nav-button:last-child { margin-right: 0; } }
 
 /*
 * MOBILE (<768px)--------------------------------------------------------------
@@ -2166,16 +2176,21 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .overlay.is-active { opacity: 1; visibility: visible; }
 
-.main-page { position: relative; height: 100vh; min-height: 667px; background-image: url("./assets/images/img-index-01.jpg"); background-repeat: no-repeat; background-size: cover; }
+.main-page { height: 100vh; min-height: 667px; background-image: url("./assets/images/img-index-01.jpg"); background-repeat: no-repeat; background-size: cover; }
 
-.intro-box { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; }
+.intro { display: flex; flex-direction: column; align-items: center; justify-content: space-between; height: 100vh; padding-top: 150px; }
 
 .intro-box-title { margin-bottom: 10px; font-family: "Poppins", sans-serif; font-size: 34px; font-weight: 500; line-height: 42px; color: #fff; text-align: center; }
 
 .intro-box-desc { font-size: 12px; line-height: 20px; color: #fff; text-align: center; }
 
-@media screen and (min-width: 768px) { .intro-box-title { font-size: 70px; line-height: 80px; }
+.intro-nav { margin-bottom: 50px; }
+
+@media screen and (min-width: 768px) { .intro { padding-top: 300px; }
+  .intro-box-title { font-size: 70px; line-height: 80px; }
   .intro-box-desc { font-size: 20px; line-height: 32px; }
-  .intro-nav { position: absolute; left: 50%; transform: translateX(-50%); } }
+  .intro-nav { width: 70%; margin-bottom: 100px; } }
+
+@media screen and (min-width: 1200px) { .intro-nav { min-width: 1150px; } }
 
 /*# sourceMappingURL=styles.css.map */
