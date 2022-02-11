@@ -2,27 +2,11 @@
 	@include column-flexbox;
 
 	&-button {
-		position: relative;
 		width: 100%;
 		padding-right: 55px;
 		padding-bottom: 5px;
 		margin-bottom: 10px;
 		border-bottom: 1px solid $border;
-
-		&::after {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			display: block;
-			width: 42px;
-			height: 42px;
-			line-height: 42px;
-			color: $white;
-			text-align: center;
-			border: 1px solid $white;
-			border-radius: 50%;
-			content: '+';
-		}
 	}
 
 	&-title {
@@ -43,36 +27,11 @@
 		flex-wrap: wrap;
 
 		&-button {
-			position: relative;
 			width: 100%;
 			padding-right: 55px;
-
 			padding-bottom: 0;
 			margin-bottom: 0;
 			border-bottom: 0;
-
-			&::after {
-				position: absolute;
-				right: 0;
-				bottom: 0;
-				display: block;
-				width: 42px;
-				height: 42px;
-				line-height: 42px;
-				color: $white;
-				text-align: center;
-				border: 1px solid $white;
-				border-radius: 50%;
-				content: '+';
-			}
-
-			&:nth-child(2n + 1) {
-				width: 40%;
-			}
-
-			&:not(:nth-child(2n + 1)) {
-				width: 315px;
-			}
 		}
 
 		&-title {
@@ -91,13 +50,5 @@
 	@include responsive(D) {
 		@include flexbox(between);
 		flex-wrap: nowrap;
-
-		&-button {
-			width: auto !important;
-
-			&:last-child {
-				margin-right: 0;
-			}
-		}
 	}
 }

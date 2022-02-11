@@ -1,0 +1,93 @@
+.intro-nav-button {
+	position: relative;
+	animation: 1000ms ease-in-out inFromLeft;
+
+	&::after {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		display: block;
+		width: 42px;
+		height: 42px;
+		line-height: 42px;
+		color: $white;
+		text-align: center;
+		border: 1px solid $white;
+		border-radius: 50%;
+		content: '+';
+	}
+
+	&:active {
+		opacity: 0.6;
+	}
+
+	&:nth-child(2) {
+		animation-duration: 1200ms;
+	}
+
+	&:nth-child(3) {
+		animation-duration: 1400ms;
+	}
+
+	&:nth-child(4) {
+		animation-duration: 1600ms;
+	}
+
+	@include responsive(T) {
+		&:nth-child(2n + 1) {
+			width: 40%;
+			animation-duration: 1100ms;
+		}
+
+		&:nth-child(2n) {
+			width: 315px;
+			animation-duration: 1000ms;
+		}
+	}
+
+	@include responsive(D) {
+		width: auto !important;
+		animation: 1000ms ease-in-out inFromDown;
+		transition: transform 200ms ease-in-out;
+
+		&:nth-child(2) {
+			animation-duration: 1400ms;
+		}
+
+		&:nth-child(3) {
+			animation-duration: 1600ms;
+		}
+
+		&:last-child {
+			margin-right: 0;
+			animation-duration: 1800ms;
+		}
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+@keyframes inFromLeft {
+	0% {
+		opacity: 0.1;
+		transform: translateX(-100%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes inFromDown {
+	0% {
+		opacity: 0.1;
+		transform: translateY(350%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
