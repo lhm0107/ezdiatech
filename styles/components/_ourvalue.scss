@@ -1,3 +1,16 @@
 .ourvalue {
-	display: none;
+	padding: $gnb-height-sm + 15px 15px;
+
+	&-list {
+		@include column-flexbox(start, start);
+		width: 100%;
+	}
+
+	&-item {
+		width: 85%;
+	}
+
+	&-item:nth-child(2) {
+		align-self: flex-end;
+	}
 }

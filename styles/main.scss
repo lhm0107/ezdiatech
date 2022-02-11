@@ -3,6 +3,7 @@
 @import './constants/berakpoints';
 @import './constants/grids';
 @import './constants/z-indexs';
+@import './constants/dimension';
 
 @import './base/fonts';
 @import './base/normalize';
@@ -27,6 +28,7 @@
 @import './components/intro-nav';
 @import './components/intro-nav-button';
 @import './components/ourvalue';
+@import './components/ourvalue-figure';
 
 @import './layouts/grids';
 @import './layouts/global-header';

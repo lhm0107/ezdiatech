@@ -227,7 +227,7 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .pagenation .page-item a:hover, .pagenation .page-item button:hover { color: #0c0e1c; }
 
-.diagram { width: 100px; height: 149px; }
+.diagram { width: 100px; }
 
 .diagram-img { width: 100px; height: 100px; margin-bottom: 9px; background-color: #e7e9f6; background-image: url("./assets/images/ico-tech1.png"); background-position: center; background-repeat: no-repeat; border-radius: 50%; }
 
@@ -344,7 +344,29 @@ i { /* use !important to prevent issues with browser extensions that change font
   100% { opacity: 1;
     transform: translateY(0); } }
 
-.ourvalue { display: none; }
+.ourvalue { padding: 79px 15px; }
+
+.ourvalue-list { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; width: 100%; }
+
+.ourvalue-item { width: 85%; }
+
+.ourvalue-item:nth-child(2) { align-self: flex-end; }
+
+.ourvalue-figure-imge { display: block; width: 100%; }
+
+.ourvalue-figure-caption { margin: 10px 0; }
+
+.ourvalue-figure-title { font-size: 16px; line-height: 28px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
+
+.ourvalue-figure-desc { font-size: 12px; line-height: 22px; color: #5e6074; margin-bottom: 10px; }
+
+.ourvalue-figure.box-title { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; flex-direction: column-reverse; margin-bottom: 30px; }
+
+.ourvalue-figure.box-title img { width: 100%; }
+
+.ourvalue-figure.box-title h2 { margin-bottom: 10px; font-size: 40px; }
+
+.ourvalue-figure.box-title p { font-size: 12px; }
 
 /*
 * MOBILE (<768px)--------------------------------------------------------------
