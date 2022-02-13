@@ -1,16 +1,47 @@
 .ourvalue {
-	padding: $gnb-height-sm + 15px 15px;
+	padding: $gnb-height-sm + 15px 5%;
 
 	&-list {
 		@include column-flexbox(start, start);
-		width: 100%;
+		@include no-scrollbar;
+
+		height: 100%;
+		overflow: auto;
 	}
 
 	&-item {
-		width: 85%;
+		height: 100%;
+	}
+
+	&-item:nth-child(1) {
+		padding-left: 8.5%;
 	}
 
 	&-item:nth-child(2) {
-		align-self: flex-end;
+		padding-left: 20%;
+	}
+
+	&-item:nth-child(3) {
+		padding-right: 20%;
+	}
+
+	@include responsive(T) {
+		padding: $gnb-height-md + 100px 4% 0 8%;
+
+		.box-title {
+			padding-bottom: 92px;
+		}
+
+		&-box {
+			@include flexbox(end, end);
+		}
+
+		&-list {
+			align-items: end;
+			min-height: 45%;
+		}
+	}
+
+	@include responsive(D) {
 	}
 }

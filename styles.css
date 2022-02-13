@@ -344,15 +344,26 @@ i { /* use !important to prevent issues with browser extensions that change font
   100% { opacity: 1;
     transform: translateY(0); } }
 
-.ourvalue { padding: 79px 15px; }
+.ourvalue { padding: 79px 5%; }
 
-.ourvalue-list { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; width: 100%; }
+.ourvalue-list { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; height: 100%; overflow: auto; }
 
-.ourvalue-item { width: 85%; }
+.ourvalue-list::-webkit-scrollbar { display: none !important; }
 
-.ourvalue-item:nth-child(2) { align-self: flex-end; }
+.ourvalue-item { height: 100%; }
 
-.ourvalue-figure-imge { display: block; width: 100%; }
+.ourvalue-item:nth-child(1) { padding-left: 8.5%; }
+
+.ourvalue-item:nth-child(2) { padding-left: 20%; }
+
+.ourvalue-item:nth-child(3) { padding-right: 20%; }
+
+@media screen and (min-width: 768px) { .ourvalue { padding: 200px 4% 0 8%; }
+  .ourvalue .box-title { padding-bottom: 92px; }
+  .ourvalue-box { display: flex; align-items: flex-end; justify-content: flex-end; }
+  .ourvalue-list { align-items: end; min-height: 45%; } }
+
+.ourvalue-figure-imge { display: block; width: 100%; border-radius: 8px; }
 
 .ourvalue-figure-caption { margin: 10px 0; }
 
@@ -360,13 +371,17 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .ourvalue-figure-desc { font-size: 12px; line-height: 22px; color: #5e6074; margin-bottom: 10px; }
 
-.ourvalue-figure.box-title { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; flex-direction: column-reverse; margin-bottom: 30px; }
+.ourvalue-figure.box-title { display: flex; flex-direction: column-reverse; margin-bottom: 30px; }
 
-.ourvalue-figure.box-title img { width: 100%; }
+.ourvalue-figure.box-title img { height: 100%; margin: 0 auto; }
 
 .ourvalue-figure.box-title h2 { margin-bottom: 10px; font-size: 40px; }
 
 .ourvalue-figure.box-title p { font-size: 12px; }
+
+@media screen and (min-width: 768px) { .ourvalue-figure-imge { max-height: 100%; }
+  .ourvalue-figure.box-title { margin-right: 3%; margin-bottom: 0; }
+  .ourvalue-figure.box-title img { margin: 0 0; } }
 
 /*
 * MOBILE (<768px)--------------------------------------------------------------

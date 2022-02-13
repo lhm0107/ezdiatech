@@ -2,6 +2,7 @@
 	&-imge {
 		display: block;
 		width: 100%;
+		border-radius: 8px;
 	}
 
 	&-caption {
@@ -18,12 +19,13 @@
 	}
 
 	&.box-title {
-		@include column-flexbox(start);
+		display: flex;
 		flex-direction: column-reverse;
 		margin-bottom: 30px;
 
 		img {
-			width: 100%;
+			height: 100%;
+			margin: 0 auto;
 		}
 
 		h2 {
@@ -33,6 +35,21 @@
 
 		p {
 			font-size: 12px;
+		}
+	}
+
+	@include responsive(T) {
+		&-imge {
+			max-height: 100%;
+		}
+
+		&.box-title {
+			margin-right: 3%;
+			margin-bottom: 0;
+
+			img {
+				margin: 0 0;
+			}
 		}
 	}
 }
