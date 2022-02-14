@@ -1,8 +1,14 @@
 .ourvalue-figure {
-	&-imge {
+	width: 100%;
+
+	&-image {
 		display: block;
 		width: 100%;
-		border-radius: 8px;
+
+		img {
+			width: 100%;
+			border-radius: 8px;
+		}
 	}
 
 	&-caption {
@@ -16,26 +22,6 @@
 	&-desc {
 		@include text-style(12, $secondary);
 		margin-bottom: 10px;
-	}
-
-	&.box-title {
-		display: flex;
-		flex-direction: column-reverse;
-		margin-bottom: 30px;
-
-		img {
-			height: 100%;
-			margin: 0 auto;
-		}
-
-		h2 {
-			margin-bottom: 10px;
-			font-size: 40px;
-		}
-
-		p {
-			font-size: 12px;
-		}
 	}
 
 	@include responsive(T) {

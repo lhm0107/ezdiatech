@@ -1,12 +1,47 @@
 .ourvalue {
-	padding: $gnb-height-sm + 15px 5%;
+	$ourvalue-figure-caption: 112px;
+	height: 100vh;
+
+	&-box {
+		height: 100%;
+	}
+
+	&-title {
+		@include column-flexbox(end, start);
+		flex-direction: column-reverse;
+		height: 50%;
+		padding: $gnb-height-sm + 15px 5% 0;
+
+		&-image {
+			max-height: calc(100% - #{$ourvalue-figure-caption});
+
+			img {
+				height: 100%;
+				border-radius: 8px;
+			}
+		}
+
+		h2 {
+			margin-bottom: 10px;
+			font-size: 40px;
+		}
+
+		p {
+			font-size: 12px;
+		}
+	}
+
+	&-list-wrap {
+		@include no-scrollbar;
+		height: 40%;
+		padding: 0 15px;
+		margin-top: 10%;
+		overflow: auto;
+	}
 
 	&-list {
 		@include column-flexbox(start, start);
-		@include no-scrollbar;
-
-		height: 100%;
-		overflow: auto;
+		// margin: 5% 0;
 	}
 
 	&-item {
@@ -28,11 +63,11 @@
 	@include responsive(T) {
 		padding: $gnb-height-md + 100px 4% 0 8%;
 
-		.box-title {
+		&-title {
 			padding-bottom: 92px;
 		}
 
-		&-box {
+		&-box-title {
 			@include flexbox(end, end);
 		}
 
