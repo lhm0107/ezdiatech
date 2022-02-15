@@ -1,22 +1,20 @@
 .ourvalue-figure {
-	width: 100%;
-
 	&-image {
 		display: block;
-		width: 100%;
 
 		img {
-			width: 50%;
+			width: 80%;
 			border-radius: 8px;
 		}
 	}
 
 	&-caption {
 		margin-bottom: 5px;
+		word-break: keep-all;
 	}
 
 	&-title {
-		@include text-style(16, $primary, $font-sub);
+		@include text-style(20, $primary, $font-sub);
 	}
 
 	&-desc {
@@ -26,8 +24,6 @@
 
 	@include responsive(T) {
 		&-image {
-			max-height: 100%;
-
 			img {
 				width: 100%;
 				border-radius: 8px;
@@ -41,6 +37,14 @@
 			img {
 				margin: 0 0;
 			}
+		}
+
+		&-title {
+			@include text-style(24, $primary, $font-sub);
+		}
+
+		&-desc {
+			@include text-style(14, $primary, $font-sub);
 		}
 	}
 }

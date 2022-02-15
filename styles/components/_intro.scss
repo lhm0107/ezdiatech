@@ -56,7 +56,7 @@
 		background-image: url('./assets/images/img-index-01-x2.png');
 
 		&-nav {
-			min-width: 1150px;
+			width: $gnb-width-md;
 		}
 	}
 }
