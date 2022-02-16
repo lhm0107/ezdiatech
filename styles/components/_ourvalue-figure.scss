@@ -1,6 +1,7 @@
 .ourvalue-figure {
 	&-image {
 		display: block;
+		margin-bottom: 10px;
 
 		img {
 			width: 80%;
@@ -45,6 +46,12 @@
 
 		&-desc {
 			@include text-style(14, $primary, $font-sub);
+		}
+	}
+
+	@include responsive(D) {
+		&-desc {
+			@include text-style(16, $primary, $font-sub);
 		}
 	}
 }

@@ -363,13 +363,13 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .ourvalue-list { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; width: 80%; margin: 0 auto; }
 
-.ourvalue-item { height: 100%; }
+.ourvalue-item { flex-shrink: 1; height: 100%; margin-bottom: 15px; }
 
 .ourvalue-item:nth-child(1) { padding-left: 8.5%; }
 
 .ourvalue-item:nth-child(2) { padding-left: 20%; }
 
-.ourvalue-item:nth-child(3) { padding-right: 20%; }
+.ourvalue-item:nth-child(3) { padding-right: 20%; margin-bottom: 0; }
 
 @media screen and (min-width: 768px) { .ourvalue-box { align-items: flex-start; flex-direction: row; padding-top: 115px; }
   .ourvalue-title { justify-content: flex-end; width: 50%; height: 100%; max-height: none; padding-top: 0; padding-left: 8.3%; }
@@ -377,18 +377,19 @@ i { /* use !important to prevent issues with browser extensions that change font
   .ourvalue-title-image img { width: 100%; height: auto; }
   .ourvalue-title h2 { font-size: 60px; line-height: 82px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
   .ourvalue-title p { font-size: 18px; line-height: 30px; color: #5e6074; }
-  .ourvalue-list-wrap { width: 50%; height: 100%; padding-top: 182px; padding-right: 8.3%; }
-  .ourvalue-list { width: 100%; padding-left: 30px; } }
+  .ourvalue-list-wrap { width: 50%; height: calc(100% - 182px); padding-right: 8.3%; margin-top: 182px; }
+  .ourvalue-list { width: 100%; padding-left: 30px; }
+  .ourvalue-item { margin-bottom: 50px; } }
 
-@media screen and (min-width: 1200px) { .ourvalue-box { justify-content: flex-end; width: 100%; max-width: 1600px; margin: 0 auto; }
+@media screen and (min-width: 1200px) { .ourvalue { height: 1300px; padding: 0 30px; }
+  .ourvalue-box { justify-content: flex-end; max-width: 1600px; padding-top: 200px; margin: 0 auto; }
   .ourvalue-title { max-width: 580px; padding-right: 0; padding-left: 0; }
-  .ourvalue-list-wrap { max-width: 960px; padding-top: 152px; padding-right: 0; padding-left: 0; }
-  .ourvalue-list { padding: 0 60px; }
-  .ourvalue-item:nth-child(1) .ourvalue-figure { max-width: 441px; }
-  .ourvalue-item:nth-child(2) { padding-left: 20%; align-items: flex-end; max-width: 547px; }
-  .ourvalue-item:nth-child(3) { padding-right: 20%; max-width: 390px; } }
+  .ourvalue-list-wrap { max-width: 960px; height: calc(100% - 152px); padding-right: 0; padding-left: 0; margin-top: 152px; margin-bottom: 0; }
+  .ourvalue-list { padding-left: 60px; }
+  .ourvalue-item:nth-child(1) { width: 70%; max-width: 441px; }
+  .ourvalue-item:nth-child(3) { width: 50%; max-width: 390px; padding-right: 0; margin-bottom: 0; } }
 
-.ourvalue-figure-image { display: block; }
+.ourvalue-figure-image { display: block; margin-bottom: 10px; }
 
 .ourvalue-figure-image img { width: 80%; border-radius: 8px; }
 
@@ -403,6 +404,8 @@ i { /* use !important to prevent issues with browser extensions that change font
   .ourvalue-figure.box-title img { margin: 0 0; }
   .ourvalue-figure-title { font-size: 24px; line-height: 40px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
   .ourvalue-figure-desc { font-size: 14px; line-height: 24px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; } }
+
+@media screen and (min-width: 1200px) { .ourvalue-figure-desc { font-size: 16px; line-height: 28px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; } }
 
 /*
 * MOBILE (<768px)--------------------------------------------------------------

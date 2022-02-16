@@ -49,7 +49,9 @@
 	}
 
 	&-item {
+		flex-shrink: 1;
 		height: 100%;
+		margin-bottom: 15px;
 	}
 
 	&-item:nth-child(1) {
@@ -62,6 +64,7 @@
 
 	&-item:nth-child(3) {
 		padding-right: 20%;
+		margin-bottom: 0;
 	}
 
 	@include responsive(T) {
@@ -100,22 +103,29 @@
 
 		&-list-wrap {
 			width: 50%;
-			height: 100%;
-			padding-top: $ourvalue-figure-caption-md;
+			height: calc(100% - #{$ourvalue-figure-caption-md});
 			padding-right: 8.3%;
+			margin-top: $ourvalue-figure-caption-md;
 		}
 
 		&-list {
 			width: 100%;
 			padding-left: 30px;
 		}
+
+		&-item {
+			margin-bottom: 50px;
+		}
 	}
 
 	@include responsive(D) {
+		height: 1300px;
+		padding: 0 30px;
+
 		&-box {
 			justify-content: flex-end;
-			width: 100%;
 			max-width: 1600px;
+			padding-top: 200px;
 			margin: 0 auto;
 		}
 
@@ -127,30 +137,27 @@
 
 		&-list-wrap {
 			max-width: 960px;
-			padding-top: $ourvalue-figure-caption-lg;
+			height: calc(100% - #{$ourvalue-figure-caption-lg});
 			padding-right: 0;
 			padding-left: 0;
+			margin-top: $ourvalue-figure-caption-lg;
+			margin-bottom: 0;
 		}
 
 		&-list {
-			padding: 0 60px;
+			padding-left: 60px;
 		}
 
 		&-item:nth-child(1) {
-			.ourvalue-figure {
-				max-width: 441px;
-			}
-		}
-
-		&-item:nth-child(2) {
-			padding-left: 20%;
-			align-items: flex-end;
-			max-width: 547px;
+			width: 70%;
+			max-width: 441px;
 		}
 
 		&-item:nth-child(3) {
-			padding-right: 20%;
+			width: 50%;
 			max-width: 390px;
+			padding-right: 0;
+			margin-bottom: 0;
 		}
 	}
 }
