@@ -1,5 +1,5 @@
 .ourvalue {
-	$ourvalue-figure-caption: 77px;
+	$ourvalue-figure-caption-sm: 86px;
 	$ourvalue-figure-caption-md: 182px;
 	$ourvalue-figure-caption-lg: 152px;
 	height: 100vh;
@@ -7,24 +7,20 @@
 	&-box {
 		@include column-flexbox(start);
 		height: 100%;
+		padding: $gnb-height-sm + 15px 8.3% 0;
 	}
 
 	&-title {
 		@include column-flexbox(end, center);
 		flex-direction: column-reverse;
 		width: 100%;
-		max-height: 50%;
-		padding-top: $gnb-height-sm + 15px;
-		padding-right: 15px;
-		padding-left: 15px;
 		margin-bottom: 10px;
 
 		&-image {
-			max-height: calc(100% - #{$ourvalue-figure-caption});
+			max-height: calc(100% - #{$ourvalue-figure-caption-sm} - 5px);
 
 			img {
 				width: 100%;
-				height: 100%;
 				border-radius: 8px;
 			}
 		}
@@ -36,21 +32,16 @@
 
 	&-list-wrap {
 		@include no-scrollbar;
-		height: calc(50% - 10px);
 		padding-left: 3%;
-		margin-bottom: 10px;
 		overflow: auto;
 	}
 
 	&-list {
 		@include column-flexbox(start, start);
-		width: 80%;
 		margin: 0 auto;
 	}
 
 	&-item {
-		flex-shrink: 1;
-		height: 100%;
 		margin-bottom: 15px;
 	}
 
@@ -71,25 +62,14 @@
 		&-box {
 			align-items: flex-start;
 			flex-direction: row;
-			padding-top: $gnb-height-md + 15px;
+			padding: $gnb-height-md + 15px 8.3% 0;
 		}
 
 		&-title {
-			justify-content: flex-end;
 			width: 50%;
-			height: 100%;
-			max-height: none;
-			padding-top: 0;
-			padding-left: 8.3%;
 
 			&-image {
-				max-width: 100%;
-				max-height: 100%;
-
-				img {
-					width: 100%;
-					height: auto;
-				}
+				width: 100%;
 			}
 
 			h2 {
@@ -104,12 +84,10 @@
 		&-list-wrap {
 			width: 50%;
 			height: calc(100% - #{$ourvalue-figure-caption-md});
-			padding-right: 8.3%;
 			margin-top: $ourvalue-figure-caption-md;
 		}
 
 		&-list {
-			width: 100%;
 			padding-left: 30px;
 		}
 
@@ -136,12 +114,10 @@
 		}
 
 		&-list-wrap {
-			max-width: 960px;
 			height: calc(100% - #{$ourvalue-figure-caption-lg});
 			padding-right: 0;
 			padding-left: 0;
 			margin-top: $ourvalue-figure-caption-lg;
-			margin-bottom: 0;
 		}
 
 		&-list {
@@ -149,12 +125,10 @@
 		}
 
 		&-item:nth-child(1) {
-			width: 70%;
 			max-width: 441px;
 		}
 
 		&-item:nth-child(3) {
-			width: 50%;
 			max-width: 390px;
 			padding-right: 0;
 			margin-bottom: 0;
