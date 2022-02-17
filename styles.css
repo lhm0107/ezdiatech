@@ -227,11 +227,11 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .pagenation .page-item a:hover, .pagenation .page-item button:hover { color: #0c0e1c; }
 
-.diagram { width: 100px; }
+.diagram { width: 100%; }
 
-.diagram-img { width: 100px; height: 100px; margin-bottom: 9px; background-color: #e7e9f6; background-image: url("./assets/images/ico-tech1.png"); background-position: center; background-repeat: no-repeat; border-radius: 50%; }
+.diagram-img { width: 50px; height: 50px; margin-bottom: 5px; background-color: #e7e9f6; background-image: url("./assets/images/ico-tech1.png"); background-position: center; background-repeat: no-repeat; border-radius: 50%; }
 
-.diagram-text { font-size: 14px; line-height: 24px; color: #5e6074; text-align: center; }
+.diagram-text { font-size: 10px; line-height: 20px; color: #5e6074; text-align: center; }
 
 @media screen and (min-width: 768px) { .gnb-nav { position: relative; z-index: 60; width: 100%; height: 100px; }
   .gnb-nav-wrap { position: absolute; left: 50%; transform: translateX(-50%); top: -1px; }
@@ -388,23 +388,45 @@ i { /* use !important to prevent issues with browser extensions that change font
   .ourvalue-item:nth-child(1) { max-width: 441px; }
   .ourvalue-item:nth-child(3) { max-width: 390px; padding-right: 0; margin-bottom: 0; } }
 
-.ourvalue-figure-image { display: block; margin-bottom: 10px; }
+.business-box { padding: 79px 8.3% 0; }
 
-.ourvalue-figure-image img { width: 80%; border-radius: 8px; }
+.business-title { font-size: 32px; line-height: 48px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
 
-.ourvalue-figure-caption { margin-bottom: 5px; word-break: keep-all; }
+.business-desc { font-size: 12px; line-height: 22px; color: #5e6074; margin-bottom: 10px; }
 
-.ourvalue-figure-title { font-size: 20px; line-height: 32px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
+.figure-image { display: block; margin-bottom: 10px; }
 
-.ourvalue-figure-desc { font-size: 12px; line-height: 22px; color: #5e6074; margin-bottom: 5px; }
+.figure-image img { width: 80%; border-radius: 8px; }
 
-@media screen and (min-width: 768px) { .ourvalue-figure-image img { width: 100%; border-radius: 8px; }
-  .ourvalue-figure.box-title { margin-right: 3%; margin-bottom: 0; }
-  .ourvalue-figure.box-title img { margin: 0 0; }
-  .ourvalue-figure-title { font-size: 24px; line-height: 40px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
-  .ourvalue-figure-desc { font-size: 14px; line-height: 24px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; } }
+.figure-caption { margin-bottom: 5px; word-break: keep-all; }
 
-@media screen and (min-width: 1200px) { .ourvalue-figure-desc { font-size: 16px; line-height: 28px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; } }
+.figure-title { font-size: 20px; line-height: 32px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; font-weight: 800; }
+
+.figure-desc { font-size: 12px; line-height: 22px; color: #5e6074; margin-bottom: 5px; }
+
+.figure-desc-blue { font-size: 12px; line-height: 22px; color: #2c64e5; font-weight: 800; }
+
+@media screen and (min-width: 768px) { .figure-image img { width: 100%; border-radius: 8px; }
+  .figure.box-title { margin-right: 3%; margin-bottom: 0; }
+  .figure.box-title img { margin: 0 0; }
+  .figure-title { font-size: 24px; line-height: 40px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
+  .figure-desc { font-size: 14px; line-height: 24px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; } }
+
+@media screen and (min-width: 1200px) { .figure-desc { font-size: 16px; line-height: 28px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; } }
+
+.technologies { width: 100%; }
+
+.technologies-list { display: flex; align-items: center; justify-content: space-around; }
+
+.technologies-item .diagram-img { width: 50px; height: 50px; background-size: 50%; }
+
+.technologies-item:nth-child(2) .diagram-img { background-image: url("./assets/images/ico-tech2.png"); }
+
+.technologies-item:nth-child(3) .diagram-img { background-image: url("./assets/images/ico-tech3.png"); }
+
+.technologies-item:nth-child(4) .diagram-img { background-image: url("./assets/images/ico-tech4.png"); }
+
+.technologies-item:nth-child(5) .diagram-img { background-image: url("./assets/images/ico-tech1.png"); }
 
 /*
 * MOBILE (<768px)--------------------------------------------------------------

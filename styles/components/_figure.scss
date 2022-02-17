@@ -1,4 +1,4 @@
-.ourvalue-figure {
+.figure {
 	&-image {
 		display: block;
 		margin-bottom: 10px;
@@ -16,11 +16,17 @@
 
 	&-title {
 		@include text-style(20, $primary, $font-sub);
+		font-weight: 800;
 	}
 
 	&-desc {
 		@include text-style(12, $secondary);
 		margin-bottom: 5px;
+
+		&-blue {
+			@include text-style(12, $blue);
+			font-weight: 800;
+		}
 	}
 
 	@include responsive(T) {

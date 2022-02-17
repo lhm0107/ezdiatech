@@ -1,0 +1,41 @@
+.technologies {
+	width: 100%;
+
+	&-list {
+		@include flexbox(around);
+	}
+
+	&-item {
+		.diagram {
+			&-img {
+				width: 50px;
+				height: 50px;
+				background-size: 50%;
+			}
+		}
+
+		&:nth-child(2) .diagram {
+			&-img {
+				background-image: url('./assets/images/ico-tech2.png');
+			}
+		}
+
+		&:nth-child(3) .diagram {
+			&-img {
+				background-image: url('./assets/images/ico-tech3.png');
+			}
+		}
+
+		&:nth-child(4) .diagram {
+			&-img {
+				background-image: url('./assets/images/ico-tech4.png');
+			}
+		}
+
+		&:nth-child(5) .diagram {
+			&-img {
+				background-image: url('./assets/images/ico-tech1.png');
+			}
+		}
+	}
+}
