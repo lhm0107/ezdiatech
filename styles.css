@@ -111,7 +111,7 @@ template { display: none; }
 
 * { margin: 0; font-family: "Noto Sans KR", sans-serif; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; letter-spacing: 0.025em; box-sizing: border-box; }
 
-html, body { font-family: "Noto Sans KR", sans-serif; font-size: 16px; color: #0c0e1c; }
+html, body { font-family: "Noto Sans KR", sans-serif; font-size: 16px; color: #0c0e1c; word-break: keep-all; }
 
 h1 { margin: 0; }
 
@@ -227,11 +227,11 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .pagenation .page-item a:hover, .pagenation .page-item button:hover { color: #0c0e1c; }
 
-.diagram { width: 100%; }
+.diagram { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; }
 
 .diagram-img { width: 50px; height: 50px; margin-bottom: 5px; background-color: #e7e9f6; background-image: url("./assets/images/ico-tech1.png"); background-position: center; background-repeat: no-repeat; border-radius: 50%; }
 
-.diagram-text { font-size: 10px; line-height: 20px; color: #5e6074; text-align: center; }
+.diagram-text { font-size: 10px; line-height: 20px; color: #5e6074; width: 50px; text-align: center; }
 
 @media screen and (min-width: 768px) { .gnb-nav { position: relative; z-index: 60; width: 100%; height: 100px; }
   .gnb-nav-wrap { position: absolute; left: 50%; transform: translateX(-50%); top: -1px; }
@@ -388,11 +388,17 @@ i { /* use !important to prevent issues with browser extensions that change font
   .ourvalue-item:nth-child(1) { max-width: 441px; }
   .ourvalue-item:nth-child(3) { max-width: 390px; padding-right: 0; margin-bottom: 0; } }
 
-.business-box { padding: 79px 8.3% 0; }
+.business-box { margin-top: 79px; }
 
 .business-title { font-size: 32px; line-height: 48px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
 
-.business-desc { font-size: 12px; line-height: 22px; color: #5e6074; margin-bottom: 10px; }
+.business-desc { font-size: 12px; line-height: 22px; color: #5e6074; margin-bottom: 30px; }
+
+@media screen and (min-width: 768px) { .business { position: relative; }
+  .business-box { margin-top: 200px; }
+  .business-head { width: 100%; text-align: center; }
+  .business-title { font-size: 60px; line-height: 82px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
+  .business-desc { font-size: 18px; line-height: 30px; color: #5e6074; } }
 
 .figure-image { display: block; margin-bottom: 10px; }
 
@@ -410,15 +416,24 @@ i { /* use !important to prevent issues with browser extensions that change font
   .figure.box-title { margin-right: 3%; margin-bottom: 0; }
   .figure.box-title img { margin: 0 0; }
   .figure-title { font-size: 24px; line-height: 40px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
-  .figure-desc { font-size: 14px; line-height: 24px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; } }
+  .figure-desc { font-size: 14px; line-height: 24px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
+  .figure-wrap { padding-top: 100px; }
+  .figure.veus, .figure.rapid { display: flex; align-items: center; justify-content: center; flex-basis: 50%; }
+  .figure.veus .figure-image, .figure.rapid .figure-image { flex-basis: 50%; flex-shrink: 0; margin-right: 60px; }
+  .figure.rapid { flex-direction: row-reverse; }
+  .figure.rapid .figure-image { margin-right: 0; margin-left: 60px; } }
 
 @media screen and (min-width: 1200px) { .figure-desc { font-size: 16px; line-height: 28px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; } }
 
 .technologies { width: 100%; }
 
-.technologies-list { display: flex; align-items: center; justify-content: space-around; }
+.technologies-title { font-size: 16px; line-height: 28px; margin-top: 15px; margin-bottom: 15px; font-weight: 800; }
 
-.technologies-item .diagram-img { width: 50px; height: 50px; background-size: 50%; }
+.technologies-list { display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; }
+
+.technologies-item { margin-bottom: 30px; }
+
+.technologies-item .diagram-img { width: 50px; height: 50px; background-size: 70%; }
 
 .technologies-item:nth-child(2) .diagram-img { background-image: url("./assets/images/ico-tech2.png"); }
 
@@ -427,6 +442,12 @@ i { /* use !important to prevent issues with browser extensions that change font
 .technologies-item:nth-child(4) .diagram-img { background-image: url("./assets/images/ico-tech4.png"); }
 
 .technologies-item:nth-child(5) .diagram-img { background-image: url("./assets/images/ico-tech1.png"); }
+
+.technologies-list.rapid { justify-content: flex-start; }
+
+.technologies-list.rapid li { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+.technologies-list.rapid li p { width: 80px; }
 
 /*
 * MOBILE (<768px)--------------------------------------------------------------

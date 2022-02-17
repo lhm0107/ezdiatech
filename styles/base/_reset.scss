@@ -12,6 +12,7 @@ body {
 	font-family: $font-main;
 	font-size: $font-size-16;
 	color: $primary;
+	word-break: keep-all;
 }
 
 h1 {

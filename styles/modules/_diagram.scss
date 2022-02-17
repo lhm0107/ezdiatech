@@ -1,4 +1,5 @@
 .diagram {
+	@include column-flexbox;
 	width: 100%;
 
 	&-img {
@@ -14,6 +15,7 @@
 
 	&-text {
 		@include text-style(10, $diagram-text);
+		width: 50px;
 		text-align: center;
 	}
 }

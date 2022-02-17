@@ -53,6 +53,31 @@
 		&-desc {
 			@include text-style(14, $primary, $font-sub);
 		}
+		// business figure
+		&-wrap {
+			padding-top: 100px;
+		}
+
+		&.veus,
+		&.rapid {
+			@include flexbox;
+			flex-basis: 50%;
+
+			.figure-image {
+				flex-basis: 50%;
+				flex-shrink: 0;
+				margin-right: 60px;
+			}
+		}
+
+		&.rapid {
+			flex-direction: row-reverse;
+
+			.figure-image {
+				margin-right: 0;
+				margin-left: 60px;
+			}
+		}
 	}
 
 	@include responsive(D) {
