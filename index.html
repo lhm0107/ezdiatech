@@ -25,8 +25,8 @@
 						<div class="col-sm-4">
 							<div class="gnb-menu">
 								<h1 class="logo">
-									<a class="logo-white" href="/"><img src="./assets/images/logo_white 170 X 45.png" alt="이지다이아텍" /></a>
-									<a class="logo-black sm-hidden" href="/"><img src="./assets/images/logo_black 170 X 45.png" alt="이지다이아텍" /></a>
+									<a class="logo-white" href="/"><img src="./assets/images/logo_white-170X45.png" alt="이지다이아텍" /></a>
+									<a class="logo-black sm-hidden" href="/"><img src="./assets/images/logo_black-170X45.png" alt="이지다이아텍" /></a>
 								</h1>
 
 								<nav class="gnb-nav sm-hidden">
@@ -135,7 +135,7 @@
 					<figure class="ourvalue-title">
 						<picture class="ourvalue-title-image">
 							<source srcset="./assets/images/img-value-01-mobile.jpg" media="(max-width: 767px)" />
-							<img src="./assets/images/img-value-01 X2.png" alt="" />
+							<img src="./assets/images/img-value-01X2.png" alt="" />
 						</picture>
 						<figcaption class="ourvalue-figure-caption">
 							<h2 class="ourvalue-figure-title">Our Value</h2>
@@ -149,7 +149,7 @@
 								<figure class="ourvalue-figure">
 									<picture class="ourvalue-figure-image">
 										<source srcset="./assets/images/img-value-02.png" media="(max-width: 767px)" />
-										<img src="./assets/images/img-value-02 X2.png" alt="" />
+										<img src="./assets/images/img-value-02X2.png" alt="" />
 									</picture>
 									<figcaption class="ourvalue-figure-caption">
 										<h2 class="ourvalue-figure-title">높은 신뢰도의 차세대 진단기술</h2>
@@ -161,7 +161,7 @@
 								<figure class="ourvalue-figure">
 									<picture class="ourvalue-figure-image">
 										<source srcset="./assets/images/img-value-03.png" media="(max-width: 767px)" />
-										<img src="./assets/images/img-value-03 X2.png" alt="" />
+										<img src="./assets/images/img-value-03X2.png" alt="" />
 									</picture>
 									<figcaption class="ourvalue-figure-caption">
 										<h2 class="ourvalue-figure-title">동시구현을 통한 진단시간 대폭 감소</h2>
@@ -185,6 +185,39 @@
 					</div>
 				</div>
 			</section>
+
+			<section class="business">
+				<div class="business-box">
+					<h2 class="business-title">Ezdiatech Business</h2>
+					<p class="business-desc">이지다이아텍의 사업부와 주요 기술을 안내해드립니다.</p>
+
+					<div class="business-product-wrap">
+						<figure class="business-product">
+							<picture class="business-product-image">
+								<img src="./assets/images/img-business-01.png" alt="" />
+							</picture>
+							<figcaption class="business-producte-caption">
+								<h2 class="business-product-title">VEUS</h2>
+								<p>쉽고 빠른 완전 자동 진단 시스템</p>
+								<p class="ourvalue-figure-desc">
+									VEUS는 다섯가지의 독창적인 기술과 소재와 프로세스 모두 이지다이아텍에서 자체 개발하여 30분 이내에 빠르고 정확한 면역 분석을 수행할 수 있는 완전 자동 ALL IN ONE 시스템입니다.
+								</p>
+							</figcaption>
+						</figure>
+
+						<figure class="ourvalue-title">
+							<picture class="ourvalue-title-image">
+								<img src="./assets/images/img-business-02.png" alt="" />
+							</picture>
+							<figcaption class="ourvalue-figure-caption">
+								<h2 class="ourvalue-figure-title">Rapid</h2>
+								<p>높은 민감도와 특이도를 갖춘 팬더믹 질병 진단 기술</p>
+								<p class="ourvalue-figure-desc">면역크로마트그래피법의 원리를 이용하여 증상이 비슷한 질병을 다중진단을 통해 가볍고 빠르게 진단할 수 있는 키트입니다.</p>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<footer class="global-footer">
@@ -194,7 +227,7 @@
 						<div class="global-footer-wrap">
 							<div class="global-footer-top">
 								<h2 class="global-footer-title">
-									<a href="/"><img src="./assets/images/logo_white 170 X 45.png" alt="로고" /></a>
+									<a href="/"><img src="./assets/images/logo_white-170X45.png" alt="로고" /></a>
 								</h2>
 								<div class="global-footer-help lg-hidden">
 									<a href="/">개인정보처리방침</a>
@@ -232,105 +265,124 @@
 			</div>
 		</footer>
 
-		<aside class="sidebar">
-			<h2 class="sidebar-logo">
+		<aside class="sidebar is-open">
+			<h2 class="visually-hidden">사이드바</h2>
+			<div class="sidebar-logo">
 				<a href="/">
-					<img src="./assets/images/logo_black 170 X 45.png" />
+					<img src="./assets/images/logo_black-170X45.png" alt="logo" />
 				</a>
 				<button class="sidebar-close-button">
 					<i class="ic-close"></i>
 				</button>
-			</h2>
+			</div>
+
 			<nav class="sidebar-nav">
 				<h3 class="visually-hidden">메뉴</h3>
 				<div class="drawer-menu">
-					<dl class="drawer-menu-list is-open">
-						<button type="button" class="drawer-menu-button">
-							VEUS
-							<i class="ic-chevron" aria-hidden></i>
-						</button>
-						<dt class="drawer-menu-term">
+					<ul class="drawer-menu-list is-open">
+						<li>
+							<button type="button" class="drawer-menu-button">
+								VEUS
+								<i class="ic-chevron" aria-hidden></i>
+							</button>
+						</li>
+						<li class="drawer-menu-term">
 							<a href="/"> 핵심기술 </a>
-						</dt>
-						<dd class="drawer-menu-item"><a href="/">독창적자성입자</a></dd>
-						<dd class="drawer-menu-item"><a href="/">신속반응기술</a></dd>
-						<dd class="drawer-menu-item"><a href="/">초고감도형광분석기</a></dd>
-						<dd class="drawer-menu-item"><a href="/">단일클론항체제조</a></dd>
-
-						<dt class="drawer-menu-term">
+							<ul>
+								<li class="drawer-menu-item"><a href="/">독창적자성입자</a></li>
+								<li class="drawer-menu-item"><a href="/">신속반응기술</a></li>
+								<li class="drawer-menu-item"><a href="/">초고감도형광분석기</a></li>
+								<li class="drawer-menu-item"><a href="/">단일클론항체제조</a></li>
+							</ul>
+						</li>
+						<li class="drawer-menu-term">
 							<a href="/"> 제품</a>
-						</dt>
-						<dd class="drawer-menu-item"><a href="/">면역진단</a></dd>
-						<dd class="drawer-menu-item"><a href="/">분자진단</a></dd>
-					</dl>
-					<dl class="drawer-menu-list is-open">
-						<button type="button" class="drawer-menu-button">
-							RAPID
-							<i class="ic-chevron" aria-hidden></i>
-						</button>
-						<dt class="drawer-menu-term">
+							<ul>
+								<li class="drawer-menu-item"><a href="/">면역진단</a></li>
+								<li class="drawer-menu-item"><a href="/">분자진단</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="drawer-menu-list is-open">
+						<li>
+							<button type="button" class="drawer-menu-button">
+								RAPID
+								<i class="ic-chevron" aria-hidden></i>
+							</button>
+						</li>
+						<li class="drawer-menu-term">
 							<a href="/"> 기술원리 </a>
-						</dt>
-						<dt class="drawer-menu-term">
+						</li>
+						<li class="drawer-menu-term">
 							<a href="/"> 사업모델</a>
-						</dt>
-						<dt class="drawer-menu-term">
+						</li>
+						<li class="drawer-menu-term">
 							<a href="/"> 제품</a>
-						</dt>
-						<dd class="drawer-menu-item"><a href="/">완제품</a></dd>
-						<dd class="drawer-menu-item"><a href="/">반제품</a></dd>
-						<dd class="drawer-menu-item"><a href="/">원료/부자재</a></dd>
-					</dl>
-					<dl class="drawer-menu-list is-open">
-						<button type="button" class="drawer-menu-button">
-							COMPANY
-							<i class="ic-chevron" aria-hidden></i>
-						</button>
-						<dt class="drawer-menu-term">
+							<ul>
+								<li class="drawer-menu-item"><a href="/">완제품</a></li>
+								<li class="drawer-menu-item"><a href="/">반제품</a></li>
+								<li class="drawer-menu-item"><a href="/">원료/부자재</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="drawer-menu-list is-open">
+						<li>
+							<button type="button" class="drawer-menu-button">
+								COMPANY
+								<i class="ic-chevron" aria-hidden></i>
+							</button>
+						</li>
+						<li class="drawer-menu-term">
 							<a href="/"> 이지다이아텍 </a>
-						</dt>
-						<dd class="drawer-menu-item"><a href="/">CEO인사말</a></dd>
-						<dd class="drawer-menu-item"><a href="/">경영철학</a></dd>
-						<dd class="drawer-menu-item"><a href="/">회사연혁</a></dd>
-						<dd class="drawer-menu-item"><a href="/">조직도</a></dd>
+							<ul>
+								<li class="drawer-menu-item"><a href="/">CEO인사말</a></li>
+								<li class="drawer-menu-item"><a href="/">경영철학</a></li>
+								<li class="drawer-menu-item"><a href="/">회사연혁</a></li>
+								<li class="drawer-menu-item"><a href="/">조직도</a></li>
+							</ul>
+						</li>
 
-						<dt class="drawer-menu-term">
+						<li class="drawer-menu-term">
 							<a href="/"> 인증현황</a>
-						</dt>
-						<dt class="drawer-menu-term">
+						</li>
+						<li class="drawer-menu-term">
 							<a href="/"> 파트너십</a>
-						</dt>
-						<dt class="drawer-menu-term">
+						</li>
+						<li class="drawer-menu-term">
 							<a href="/"> 오시는 길</a>
-						</dt>
-					</dl>
-					<dl class="drawer-menu-list is-open">
-						<button type="button" class="drawer-menu-button">
-							NEWS
-							<i class="ic-chevron" aria-hidden></i>
-						</button>
-						<dt class="drawer-menu-term">
+						</li>
+					</ul>
+					<ul class="drawer-menu-list is-open">
+						<li>
+							<button type="button" class="drawer-menu-button">
+								NEWS
+								<i class="ic-chevron" aria-hidden></i>
+							</button>
+						</li>
+						<li class="drawer-menu-term">
 							<a href="/"> 회사소식 </a>
-						</dt>
-						<dt class="drawer-menu-term">
+						</li>
+						<li class="drawer-menu-term">
 							<a href="/"> 언론보도</a>
-						</dt>
-						<dt class="drawer-menu-term">
+						</li>
+						<li class="drawer-menu-term">
 							<a href="/"> 고객상담</a>
-						</dt>
-					</dl>
-					<dl class="drawer-menu-list">
-						<button type="button" class="drawer-menu-button">
-							CAREERS
-							<i class="ic-chevron" aria-hidden></i>
-						</button>
-						<dt class="drawer-menu-term">
+						</li>
+					</ul>
+					<ul class="drawer-menu-list">
+						<li>
+							<button type="button" class="drawer-menu-button">
+								CAREERS
+								<i class="ic-chevron" aria-hidden></i>
+							</button>
+						</li>
+						<li class="drawer-menu-term">
 							<a href="/"> 인재상 </a>
-						</dt>
-						<dt class="drawer-menu-term">
+						</li>
+						<li class="drawer-menu-term">
 							<a href="/"> 채용공고</a>
-						</dt>
-					</dl>
+						</li>
+					</ul>
 				</div>
 			</nav>
 		</aside>

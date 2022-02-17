@@ -270,7 +270,7 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .drawer-menu-term { font-size: 18px; line-height: 30px; font-weight: 700; }
 
-.drawer-menu-item a { font-size: 16px; line-height: 28px; color: #5e6074; display: block; }
+.drawer-menu-item a { font-size: 16px; line-height: 28px; color: #5e6074; display: block; font-weight: 400; }
 
 @media screen and (min-width: 1200px) { .drawer-menu { display: flex; align-items: flex-start; justify-content: space-around; position: relative; left: 50%; max-width: 1400px; transform: translateX(-50%); }
   .drawer-menu-list:not(:first-child)::before { position: absolute; top: -100px; height: 150vh; margin-left: -40px; border: 1px solid #dfe0e8; content: ''; }

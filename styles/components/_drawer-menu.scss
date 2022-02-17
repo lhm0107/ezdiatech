@@ -54,6 +54,7 @@
 		a {
 			@include text-style(16, $secondary);
 			display: block;
+			font-weight: 400;
 		}
 	}
 
