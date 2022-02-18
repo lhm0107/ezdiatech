@@ -29,6 +29,29 @@
 		}
 	}
 
+	&.veus,
+	&.rapid {
+		.figure-title {
+			position: relative;
+			display: inline;
+
+			&::after {
+				position: absolute;
+				right: -30px;
+				bottom: 3px;
+				width: 20px;
+				height: 20px;
+				font-weight: 100;
+				line-height: 20px;
+				color: $white;
+				text-align: center;
+				background-color: $primary;
+				border-radius: 50%;
+				content: '+';
+			}
+		}
+	}
+
 	@include responsive(T) {
 		&-image {
 			img {
@@ -69,6 +92,14 @@
 			.figure-title {
 				@include text-style(52, $primary, $font-sub);
 				font-weight: 800;
+
+				&::after {
+					right: -83px;
+					bottom: 12px;
+					width: 50px;
+					height: 50px;
+					line-height: 50px;
+				}
 			}
 
 			.figure-desc {

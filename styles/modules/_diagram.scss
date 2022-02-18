@@ -1,11 +1,4 @@
 .diagram {
-	&-item::after {
-		display: block;
-		width: 25px;
-		border: 1px solid $diagram;
-		content: '';
-	}
-
 	@include column-flexbox;
 	width: 100%;
 
