@@ -54,19 +54,29 @@
 			@include text-style(14, $primary, $font-sub);
 		}
 		// business figure
-		&-wrap {
-			padding-top: 100px;
-		}
 
 		&.veus,
 		&.rapid {
 			@include flexbox;
-			flex-basis: 50%;
+			margin-top: 150px;
 
 			.figure-image {
-				flex-basis: 50%;
+				flex-basis: 40%;
 				flex-shrink: 0;
 				margin-right: 60px;
+			}
+
+			.figure-title {
+				@include text-style(52, $primary, $font-sub);
+				font-weight: 800;
+			}
+
+			.figure-desc {
+				@include text-style(16, $secondary);
+
+				&-blue {
+					@include text-style(20, $blue);
+				}
 			}
 		}
 
@@ -83,6 +93,20 @@
 	@include responsive(D) {
 		&-desc {
 			@include text-style(16, $primary, $font-sub);
+		}
+
+		&.veus {
+			.figure-caption {
+				background-color: #f7f8fb;
+			}
+		}
+
+		&.rapid {
+			margin-top: 300px;
+
+			li {
+				margin-right: 25px;
+			}
 		}
 	}
 }

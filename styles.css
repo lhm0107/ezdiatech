@@ -229,9 +229,14 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .diagram { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; }
 
-.diagram-img { width: 50px; height: 50px; margin-bottom: 5px; background-color: #e7e9f6; background-image: url("./assets/images/ico-tech1.png"); background-position: center; background-repeat: no-repeat; border-radius: 50%; }
+.diagram-item::after { display: block; width: 25px; border: 1px solid #e7e9f6; content: ''; }
 
-.diagram-text { font-size: 10px; line-height: 20px; color: #5e6074; width: 50px; text-align: center; }
+.diagram-img { width: 50px; height: 50px; margin-bottom: 5px; background-color: #e7e9f6; background-image: url("./assets/images/ico-tech1.png"); background-position: center; background-repeat: no-repeat; background-size: 70%; border-radius: 50%; }
+
+.diagram-text { font-size: 10px; line-height: 20px; color: #5e6074; width: 70px; text-align: center; }
+
+@media screen and (min-width: 1200px) { .diagram-img { width: 100px; height: 100px; }
+  .diagram-text { font-size: 14px; line-height: 24px; color: #5e6074; } }
 
 @media screen and (min-width: 768px) { .gnb-nav { position: relative; z-index: 60; width: 100%; height: 100px; }
   .gnb-nav-wrap { position: absolute; left: 50%; transform: translateX(-50%); top: -1px; }
@@ -381,12 +386,14 @@ i { /* use !important to prevent issues with browser extensions that change font
   .ourvalue-item { margin-bottom: 50px; } }
 
 @media screen and (min-width: 1200px) { .ourvalue { height: 1300px; padding: 0 30px; }
-  .ourvalue-box { justify-content: flex-end; max-width: 1600px; padding-top: 200px; margin: 0 auto; }
+  .ourvalue-box { justify-content: flex-end; padding-top: 200px; margin: 0 auto; }
   .ourvalue-title { max-width: 580px; padding-right: 0; padding-left: 0; }
   .ourvalue-list-wrap { height: calc(100% - 152px); padding-right: 0; padding-left: 0; margin-top: 152px; }
   .ourvalue-list { padding-left: 60px; }
   .ourvalue-item:nth-child(1) { max-width: 441px; }
   .ourvalue-item:nth-child(3) { max-width: 390px; padding-right: 0; margin-bottom: 0; } }
+
+.business { background-color: #f7f8fb; }
 
 .business-box { margin-top: 79px; }
 
@@ -395,10 +402,13 @@ i { /* use !important to prevent issues with browser extensions that change font
 .business-desc { font-size: 12px; line-height: 22px; color: #5e6074; margin-bottom: 30px; }
 
 @media screen and (min-width: 768px) { .business { position: relative; }
-  .business-box { margin-top: 200px; }
+  .business-box { margin: 200px 0; }
   .business-head { width: 100%; text-align: center; }
   .business-title { font-size: 60px; line-height: 82px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
   .business-desc { font-size: 18px; line-height: 30px; color: #5e6074; } }
+
+@media screen and (min-width: 1200px) { .business { position: relative; }
+  .business::before { position: absolute; top: 164px; right: 0; width: 244px; height: 862px; font-family: "Poppins", sans-serif; font-size: 115px; font-weight: 800; letter-spacing: 0; color: #0b3cae; content: 'GIVE CONCERN TAKE HEALTH'; opacity: 0.1; writing-mode: vertical-rl; } }
 
 .figure-image { display: block; margin-bottom: 10px; }
 
@@ -417,23 +427,30 @@ i { /* use !important to prevent issues with browser extensions that change font
   .figure.box-title img { margin: 0 0; }
   .figure-title { font-size: 24px; line-height: 40px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
   .figure-desc { font-size: 14px; line-height: 24px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
-  .figure-wrap { padding-top: 100px; }
-  .figure.veus, .figure.rapid { display: flex; align-items: center; justify-content: center; flex-basis: 50%; }
-  .figure.veus .figure-image, .figure.rapid .figure-image { flex-basis: 50%; flex-shrink: 0; margin-right: 60px; }
+  .figure.veus, .figure.rapid { display: flex; align-items: center; justify-content: center; margin-top: 150px; }
+  .figure.veus .figure-image, .figure.rapid .figure-image { flex-basis: 40%; flex-shrink: 0; margin-right: 60px; }
+  .figure.veus .figure-title, .figure.rapid .figure-title { font-size: 52px; line-height: 74px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; font-weight: 800; }
+  .figure.veus .figure-desc, .figure.rapid .figure-desc { font-size: 16px; line-height: 28px; color: #5e6074; }
+  .figure.veus .figure-desc-blue, .figure.rapid .figure-desc-blue { font-size: 20px; line-height: 32px; color: #2c64e5; }
   .figure.rapid { flex-direction: row-reverse; }
   .figure.rapid .figure-image { margin-right: 0; margin-left: 60px; } }
 
-@media screen and (min-width: 1200px) { .figure-desc { font-size: 16px; line-height: 28px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; } }
+@media screen and (min-width: 1200px) { .figure-desc { font-size: 16px; line-height: 28px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
+  .figure.veus .figure-caption { background-color: #f7f8fb; }
+  .figure.rapid { margin-top: 300px; }
+  .figure.rapid li { margin-right: 25px; } }
 
 .technologies { width: 100%; }
 
+.technologies-item:not(:last-of-type) { position: relative; }
+
+.technologies-item:not(:last-of-type) .diagram-img::after { position: absolute; top: 25px; right: -15px; display: block; width: 35px; border: 1px solid #e7e9f6; content: ''; }
+
 .technologies-title { font-size: 16px; line-height: 28px; margin-top: 15px; margin-bottom: 15px; font-weight: 800; }
 
-.technologies-list { display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; }
+.technologies-list { display: flex; align-items: center; justify-content: flex-start; margin-bottom: 30px; }
 
 .technologies-item { margin-bottom: 30px; }
-
-.technologies-item .diagram-img { width: 50px; height: 50px; background-size: 70%; }
 
 .technologies-item:nth-child(2) .diagram-img { background-image: url("./assets/images/ico-tech2.png"); }
 
@@ -443,11 +460,12 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .technologies-item:nth-child(5) .diagram-img { background-image: url("./assets/images/ico-tech1.png"); }
 
-.technologies-list.rapid { justify-content: flex-start; }
-
-.technologies-list.rapid li { display: flex; flex-direction: column; align-items: center; justify-content: center; }
-
-.technologies-list.rapid li p { width: 80px; }
+@media screen and (min-width: 1200px) { .technologies-item:not(:last-of-type) .diagram-img::after { top: 50px; right: -25px; }
+  .technologies-title { font-size: 20px; line-height: 32px; }
+  .technologies-list.rapid { justify-content: flex-start; }
+  .technologies-list.rapid li { margin-right: 25px; }
+  .technologies-list.rapid li p { width: 100px; }
+  .technologies-item { margin-right: 25px; } }
 
 /*
 * MOBILE (<768px)--------------------------------------------------------------

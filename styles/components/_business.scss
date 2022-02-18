@@ -1,4 +1,6 @@
 .business {
+	background-color: #f7f8fb;
+
 	&-box {
 		margin-top: $gnb-height-sm + 15px;
 	}
@@ -16,7 +18,7 @@
 		position: relative;
 
 		&-box {
-			margin-top: 200px;
+			margin: 200px 0;
 		}
 
 		&-head {
@@ -30,6 +32,26 @@
 
 		&-desc {
 			@include text-style(18, $secondary);
+		}
+	}
+
+	@include responsive(D) {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			top: 164px;
+			right: 0;
+			width: 244px;
+			height: 862px;
+			font-family: $font-sub;
+			font-size: 115px;
+			font-weight: 800;
+			letter-spacing: 0;
+			color: #0b3cae;
+			content: 'GIVE CONCERN TAKE HEALTH';
+			opacity: 0.1;
+			writing-mode: vertical-rl;
 		}
 	}
 }

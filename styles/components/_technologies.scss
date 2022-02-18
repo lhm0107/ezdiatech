@@ -1,6 +1,20 @@
 .technologies {
 	width: 100%;
 
+	&-item:not(:last-of-type) {
+		position: relative;
+
+		.diagram-img::after {
+			position: absolute;
+			top: 25px;
+			right: -15px;
+			display: block;
+			width: 35px;
+			border: 1px solid $diagram;
+			content: '';
+		}
+	}
+
 	&-title {
 		@include text-style(16);
 		margin-top: 15px;
@@ -9,20 +23,12 @@
 	}
 
 	&-list {
-		@include flexbox(between);
+		@include flexbox(start);
 		margin-bottom: 30px;
 	}
 
 	&-item {
 		margin-bottom: 30px;
-
-		.diagram {
-			&-img {
-				width: 50px;
-				height: 50px;
-				background-size: 70%;
-			}
-		}
 
 		&:nth-child(2) .diagram {
 			&-img {
@@ -49,14 +55,32 @@
 		}
 	}
 
-	&-list.rapid {
-		justify-content: flex-start;
-
-		li {
-			@include column-flexbox;
-			p {
-				width: 80px;
+	@include responsive(D) {
+		&-item:not(:last-of-type) {
+			.diagram-img::after {
+				top: 50px;
+				right: -25px;
 			}
+		}
+
+		&-title {
+			@include text-style(20);
+		}
+
+		&-list.rapid {
+			justify-content: flex-start;
+
+			li {
+				margin-right: 25px;
+
+				p {
+					width: 100px;
+				}
+			}
+		}
+
+		&-item {
+			margin-right: 25px;
 		}
 	}
 }

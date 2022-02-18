@@ -1,4 +1,11 @@
 .diagram {
+	&-item::after {
+		display: block;
+		width: 25px;
+		border: 1px solid $diagram;
+		content: '';
+	}
+
 	@include column-flexbox;
 	width: 100%;
 
@@ -10,12 +17,24 @@
 		background-image: url('./assets/images/ico-tech1.png');
 		background-position: center;
 		background-repeat: no-repeat;
+		background-size: 70%;
 		border-radius: 50%;
 	}
 
 	&-text {
 		@include text-style(10, $diagram-text);
-		width: 50px;
+		width: 70px;
 		text-align: center;
+	}
+
+	@include responsive(D) {
+		&-img {
+			width: 100px;
+			height: 100px;
+		}
+
+		&-text {
+			@include text-style(14, $diagram-text);
+		}
 	}
 }
