@@ -1,7 +1,5 @@
 .newsroom {
-	background-color: #000000;
-}
-.newsroom {
+	position: relative;
 	background-color: #000000;
 
 	&-head {
@@ -27,5 +25,33 @@
 	}
 
 	&-slider {
+	}
+
+	&-button {
+		@include flexbox(around);
+		position: absolute;
+		right: 15px;
+		bottom: 85px;
+		width: 60px;
+		height: 60px;
+		border: 1px solid $white;
+		border-radius: 50%;
+
+		&-prev,
+		&-next {
+			width: 30px;
+			height: 60px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 50%;
+		}
+
+		&-prev {
+			background-image: url('./assets/images/prev.png');
+		}
+
+		&-next {
+			background-image: url('./assets/images/next.png');
+		}
 	}
 }

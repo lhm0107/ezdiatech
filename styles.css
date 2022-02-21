@@ -466,9 +466,7 @@ i { /* use !important to prevent issues with browser extensions that change font
   .technologies-list.rapid li p { width: 100px; }
   .technologies-item { margin-right: 25px; } }
 
-.newsroom { background-color: #000000; }
-
-.newsroom { background-color: #000000; }
+.newsroom { position: relative; background-color: #000000; }
 
 .newsroom-head { margin-bottom: 15px; }
 
@@ -478,7 +476,37 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .newsroom-more { display: inline-block; width: 30px; font-size: 10px; line-height: 26px; border-bottom: 1px solid #fff; }
 
-.newsroom-slider-item-figure img { display: block; width: 100%; height: auto; }
+.newsroom-button { display: flex; align-items: center; justify-content: space-around; position: absolute; right: 15px; bottom: 85px; width: 60px; height: 60px; border: 1px solid #fff; border-radius: 50%; }
+
+.newsroom-button-prev, .newsroom-button-next { width: 30px; height: 60px; background-position: center; background-repeat: no-repeat; background-size: 50%; }
+
+.newsroom-button-prev { background-image: url("./assets/images/prev.png"); }
+
+.newsroom-button-next { background-image: url("./assets/images/next.png"); }
+
+.newsroom-slider-figure img { display: block; width: 100%; height: auto; }
+
+.newsroom-slider-caption h2 { font-size: 16px; line-height: 28px; color: #fff; }
+
+.newsroom-slider-caption p { font-size: 12px; line-height: 22px; color: #e63b3b; font-weight: 800; }
+
+.newsroom-slider-caption p time { font-weight: 400; color: #b0b2c1; }
+
+.newsroom-slider-caption p time::before { font-size: 12px; margin: 0 3px; content: '|'; }
+
+.newsroom-slider-count { font-size: 12px; line-height: 22px; color: rgba(255, 255, 255, 0.7); position: relative; }
+
+.newsroom-slider-count p { display: none; text-align: center; }
+
+.newsroom-slider-count p.tns-nav-active { display: block; }
+
+.newsroom-slider-count p::before, .newsroom-slider-count p::after { position: absolute; top: 50%; transform: translateY(-50%); right: 15px; width: 130px; height: 0; content: ''; }
+
+.newsroom-slider-count p::before { border: 1px solid rgba(255, 255, 255, 0.2); }
+
+.newsroom-slider-count p::after { width: 0; border: 1px solid #fff; }
+
+.newsroom-slider-count p.tns-nav-active::after { position: absolute; top: 50%; transform: translateY(-50%); right: 15px; width: 130px; height: 0; border: 1px solid #fff; content: ''; transition: width 400ms ease-in-out; }
 
 /*
 * MOBILE (<768px)--------------------------------------------------------------
