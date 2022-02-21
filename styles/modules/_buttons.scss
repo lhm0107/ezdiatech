@@ -92,3 +92,17 @@
 	height: 70px;
 	border-radius: 35px;
 }
+
+.bg {
+	width: 500px;
+	height: 500px;
+	background-color: $primary;
+}
+
+.control-button-wrap {
+	@include flexbox(around);
+	width: 120px;
+	height: 120px;
+	border: 1px solid $white;
+	border-radius: 50%;
+}
