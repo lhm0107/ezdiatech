@@ -5,12 +5,7 @@
 		margin-top: $gnb-height-sm + 15px;
 	}
 
-	&-title {
-		@include text-style(32, $primary, $font-sub);
-	}
-
 	&-desc {
-		@include text-style(12, $secondary);
 		margin-bottom: 30px;
 	}
 
@@ -24,14 +19,6 @@
 		&-head {
 			width: 100%;
 			text-align: center;
-		}
-
-		&-title {
-			@include text-style(60, $primary, $font-sub);
-		}
-
-		&-desc {
-			@include text-style(18, $secondary);
 		}
 	}
 

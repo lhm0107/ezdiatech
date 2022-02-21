@@ -24,10 +24,6 @@
 				border-radius: 8px;
 			}
 		}
-
-		h2 {
-			font-size: 36px;
-		}
 	}
 
 	&-list-wrap {
@@ -70,14 +66,6 @@
 
 			&-image {
 				width: 100%;
-			}
-
-			h2 {
-				@include text-style(60, $primary, $font-sub);
-			}
-
-			p {
-				@include text-style(18, $secondary);
 			}
 		}
 
