@@ -1,0 +1,31 @@
+.newsroom {
+	background-color: #000000;
+}
+.newsroom {
+	background-color: #000000;
+
+	&-head {
+		margin-bottom: 15px;
+
+		h2,
+		p,
+		a {
+			color: $white;
+		}
+
+		p {
+			opacity: 0.6;
+		}
+	}
+
+	&-more {
+		display: inline-block;
+		width: 30px;
+		font-size: 10px;
+		line-height: 26px;
+		border-bottom: 1px solid $white;
+	}
+
+	&-slider {
+	}
+}

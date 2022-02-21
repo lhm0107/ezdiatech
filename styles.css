@@ -175,6 +175,10 @@ address { font-style: normal; }
 
 .btn-70 { height: 70px; border-radius: 35px; }
 
+.bg { width: 500px; height: 500px; background-color: #0c0e1c; }
+
+.control-button-wrap { display: flex; align-items: center; justify-content: space-around; width: 120px; height: 120px; border: 1px solid #fff; border-radius: 50%; }
+
 i { /* use !important to prevent issues with browser extensions that change fonts */ font-family: 'ezdiatech'; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .ic-home:before { content: '\e901'; }
@@ -358,8 +362,6 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .ourvalue-title-image img { width: 100%; border-radius: 8px; }
 
-.ourvalue-title h2 { font-size: 36px; }
-
 .ourvalue-list-wrap { padding-left: 3%; overflow: auto; }
 
 .ourvalue-list-wrap::-webkit-scrollbar { display: none !important; }
@@ -377,8 +379,6 @@ i { /* use !important to prevent issues with browser extensions that change font
 @media screen and (min-width: 768px) { .ourvalue-box { align-items: flex-start; flex-direction: row; padding: 115px 8.3% 0; }
   .ourvalue-title { width: 50%; }
   .ourvalue-title-image { width: 100%; }
-  .ourvalue-title h2 { font-size: 60px; line-height: 82px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
-  .ourvalue-title p { font-size: 18px; line-height: 30px; color: #5e6074; }
   .ourvalue-list-wrap { width: 50%; height: calc(100% - 182px); margin-top: 182px; }
   .ourvalue-list { padding-left: 30px; }
   .ourvalue-item { margin-bottom: 50px; } }
@@ -395,15 +395,11 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .business-box { margin-top: 79px; }
 
-.business-title { font-size: 32px; line-height: 48px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
-
-.business-desc { font-size: 12px; line-height: 22px; color: #5e6074; margin-bottom: 30px; }
+.business-desc { margin-bottom: 30px; }
 
 @media screen and (min-width: 768px) { .business { position: relative; }
   .business-box { margin: 200px 0; }
-  .business-head { width: 100%; text-align: center; }
-  .business-title { font-size: 60px; line-height: 82px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; }
-  .business-desc { font-size: 18px; line-height: 30px; color: #5e6074; } }
+  .business-head { width: 100%; text-align: center; } }
 
 @media screen and (min-width: 1200px) { .business { position: relative; }
   .business::before { position: absolute; top: 164px; right: 0; width: 244px; height: 862px; font-family: "Poppins", sans-serif; font-size: 115px; font-weight: 800; letter-spacing: 0; color: #0b3cae; content: 'GIVE CONCERN TAKE HEALTH'; opacity: 0.1; writing-mode: vertical-rl; } }
@@ -469,6 +465,20 @@ i { /* use !important to prevent issues with browser extensions that change font
   .technologies-list.rapid li { margin-right: 25px; }
   .technologies-list.rapid li p { width: 100px; }
   .technologies-item { margin-right: 25px; } }
+
+.newsroom { background-color: #000000; }
+
+.newsroom { background-color: #000000; }
+
+.newsroom-head { margin-bottom: 15px; }
+
+.newsroom-head h2, .newsroom-head p, .newsroom-head a { color: #fff; }
+
+.newsroom-head p { opacity: 0.6; }
+
+.newsroom-more { display: inline-block; width: 30px; font-size: 10px; line-height: 26px; border-bottom: 1px solid #fff; }
+
+.newsroom-slider-item-figure img { display: block; width: 100%; height: auto; }
 
 /*
 * MOBILE (<768px)--------------------------------------------------------------
@@ -632,5 +642,12 @@ i { /* use !important to prevent issues with browser extensions that change font
 .overlay { position: fixed; top: 0; left: 0; z-index: 100; width: 100%; height: 100vh; background-color: rgba(12, 14, 28, 0.5); opacity: 0; visibility: hidden; transition: opacity 300ms ease-in-out, visibility 300ms; }
 
 .overlay.is-active { opacity: 1; visibility: visible; }
+
+.main-page-title { font-size: 32px; line-height: 48px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; font-weight: 800; }
+
+.main-page-desc { font-size: 12px; line-height: 22px; color: #5e6074; margin-bottom: 5px; }
+
+@media screen and (min-width: 768px) { .main-page-title { font-size: 60px; line-height: 82px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; font-weight: 800; }
+  .main-page-desc { font-size: 18px; line-height: 30px; color: #5e6074; margin-bottom: 5px; } }
 
 /*# sourceMappingURL=styles.css.map */
