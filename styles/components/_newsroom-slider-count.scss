@@ -1,8 +1,13 @@
 .newsroom-slider-count {
-	font-size: 13px;
+	position: relative;
+	height: 30px;
 
 	p {
-		right: 410px;
+		@include text-style(12, rgba($white, 0.7), $font-sub);
+		position: absolute;
+
+		right: 155px;
+		opacity: 0;
 
 		&.tns-nav-active {
 			opacity: 1;
@@ -37,10 +42,11 @@
 	}
 
 	@include responsive(D) {
-		@include text-style(12, rgba($white, 0.7), font-sub);
+		@include text-style(13, rgba($white, 0.7), font-sub);
 		position: relative;
 		height: 30px;
 		min-width: 200px;
+		margin-top: 140px;
 
 		p {
 			position: absolute;

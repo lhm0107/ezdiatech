@@ -1,5 +1,5 @@
 .newsroom {
-	background-color: #000000;
+	background-color: #000;
 
 	&-head {
 		margin-bottom: 15px;
@@ -31,7 +31,7 @@
 		@include flexbox(around);
 		position: absolute;
 		right: 15px;
-		bottom: 85px;
+		bottom: 50px;
 		width: 60px;
 		height: 60px;
 		border: 2px solid $white;
@@ -63,6 +63,7 @@
 		}
 
 		&-button {
+			bottom: 40px;
 			width: 120px;
 			height: 120px;
 
@@ -71,6 +72,31 @@
 				width: 45px;
 				height: 100px;
 			}
+		}
+	}
+
+	@include responsive(D) {
+		position: relative;
+		height: 1083px;
+
+		&-head {
+			margin-top: 200px;
+		}
+
+		&::before {
+			position: absolute;
+			top: 330px;
+			left: 0;
+			width: 241px;
+			height: 735px;
+			font-family: $font-sub;
+			font-size: 102px;
+			font-weight: 800;
+			letter-spacing: 0;
+			color: #0b3cae;
+			content: 'GIVE CONCERN TAKE HEALTH';
+			opacity: 0.1;
+			writing-mode: vertical-rl;
 		}
 	}
 }
