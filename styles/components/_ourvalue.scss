@@ -10,7 +10,7 @@
 		padding: $gnb-height-sm + 15px 8.3% 0;
 	}
 
-	&-title {
+	&-head {
 		@include column-flexbox(end, center);
 		flex-direction: column-reverse;
 		width: 100%;
@@ -61,7 +61,7 @@
 			padding: $gnb-height-md + 15px 8.3% 0;
 		}
 
-		&-title {
+		&-head {
 			width: 50%;
 
 			&-image {
@@ -94,7 +94,7 @@
 			margin: 0 auto;
 		}
 
-		&-title {
+		&-head {
 			max-width: 580px;
 			padding-right: 0;
 			padding-left: 0;
