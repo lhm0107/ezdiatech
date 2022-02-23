@@ -78,16 +78,16 @@
 								</nav>
 
 								<div class="gnb-button-wrap">
-									<button class="gnb-button-language sm-hidden" aria-label="언어선택 버튼">
+									<button class="gnb-language-button sm-hidden" aria-label="언어선택 버튼">
 										KO
 										<i class="ic-chevron" aria-hidden></i>
 									</button>
 
-									<button class="gnb-button-menu" type="button" aria-label="메뉴 열기 버튼">
+									<button class="gnb-menu-button" type="button" aria-label="메뉴 열기 버튼">
 										<i class="ic-hambuger"></i>
 									</button>
 								</div>
-								<button class="gnb-button-language sm-only" aria-label="언어선택 버튼">
+								<button class="gnb-language-button sm-only" aria-label="언어선택 버튼">
 									KO
 									<i class="ic-chevron" aria-hidden></i>
 								</button>
@@ -391,7 +391,6 @@
 				</div>
 				
 			</section>
-
 		</main>
 
 		<footer class="global-footer">
@@ -453,7 +452,7 @@
 			<nav class="sidebar-nav">
 				<h3 class="visually-hidden">메뉴</h3>
 				<div class="drawer-menu">
-					<ul class="drawer-menu-list is-open">
+					<ul class="drawer-menu-list">
 						<li>
 							<button type="button" class="drawer-menu-button">
 								VEUS
@@ -477,7 +476,7 @@
 							</ul>
 						</li>
 					</ul>
-					<ul class="drawer-menu-list is-open">
+					<ul class="drawer-menu-list">
 						<li>
 							<button type="button" class="drawer-menu-button">
 								RAPID
@@ -499,7 +498,7 @@
 							</ul>
 						</li>
 					</ul>
-					<ul class="drawer-menu-list is-open">
+					<ul class="drawer-menu-list">
 						<li>
 							<button type="button" class="drawer-menu-button">
 								COMPANY
@@ -526,7 +525,7 @@
 							<a href="/"> 오시는 길</a>
 						</li>
 					</ul>
-					<ul class="drawer-menu-list is-open">
+					<ul class="drawer-menu-list">
 						<li>
 							<button type="button" class="drawer-menu-button">
 								NEWS
@@ -563,6 +562,8 @@
 
 		<div class="overlay" aria-hidden></div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+		<script src="./js/sidebar.js"></script>
+		<script src="./js/sidebar-drawer.js"></script>
 		<script>
 		var slider = tns({
 			container: '.newsroom-slider-list',

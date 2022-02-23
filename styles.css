@@ -269,7 +269,9 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .drawer-menu-list.is-open .drawer-menu-item:last-child { margin-bottom: 0; }
 
-.drawer-menu-button { font-size: 32px; line-height: 48px; color: #dfe0e8; font-family: "Poppins", sans-serif; letter-spacing: 0; max-width: 300px; font-weight: 600; text-align: left; }
+.drawer-menu-list:hover .drawer-menu-button { color: #0c0e1c; }
+
+.drawer-menu-button { font-size: 32px; line-height: 48px; color: #dfe0e8; font-family: "Poppins", sans-serif; letter-spacing: 0; max-width: 300px; font-weight: 600; text-align: left; transition: color 200ms ease-in-out; }
 
 .drawer-menu-button .ic-chevron { display: inline-block; transition: transform 200ms ease-in-out; }
 
@@ -277,7 +279,11 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .drawer-menu-term { font-size: 18px; line-height: 30px; font-weight: 700; }
 
-.drawer-menu-item a { font-size: 16px; line-height: 28px; color: #5e6074; display: block; font-weight: 400; }
+.drawer-menu-term:hover > a { border-bottom: 2px solid #0c0e1c; }
+
+.drawer-menu-item a { font-size: 16px; line-height: 28px; color: #5e6074; display: inline; font-weight: 400; transition: color 200ms ease-in-out; }
+
+.drawer-menu-item:hover a { color: #2c64e5; border-bottom: 2px solid #2c64e5; }
 
 @media screen and (min-width: 1200px) { .drawer-menu { display: flex; align-items: flex-start; justify-content: space-around; position: relative; left: 50%; max-width: 1400px; transform: translateX(-50%); }
   .drawer-menu-list:not(:first-child)::before { position: absolute; top: -100px; height: 150vh; margin-left: -40px; border: 1px solid #dfe0e8; content: ''; }
@@ -626,31 +632,31 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .global-header .gnb-menu .logo img { width: auto; height: 45px; }
 
-.global-header .gnb-button-menu { order: 1; width: 44px; height: 44px; }
+.global-header .gnb-menu-button { order: 1; width: 44px; height: 44px; }
 
-.global-header .gnb-button-menu i { font-size: 43px; color: #fff; }
+.global-header .gnb-menu-button i { font-size: 43px; color: #fff; }
 
-.global-header .gnb-button-language { display: flex; align-items: center; justify-content: center; order: 2; width: 44px; height: 44px; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; line-height: 28px; color: #fff; text-align: center; border: 1px solid #dfe0e8; border-radius: 13px; }
+.global-header .gnb-language-button { display: flex; align-items: center; justify-content: center; order: 2; width: 44px; height: 44px; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; line-height: 28px; color: #fff; text-align: center; border: 1px solid #dfe0e8; border-radius: 13px; }
 
-.global-header .gnb-button-language i { font-size: 14px; }
+.global-header .gnb-language-button i { font-size: 14px; }
 
 @media screen and (min-width: 768px) { .global-header .gnb { width: 100%; background-color: #fff; }
   .global-header .gnb::after { display: block; height: 1px; background-color: #dfe0e8; content: ''; }
   .global-header .gnb .logo { position: static; margin-right: 10px; transform: none; }
   .global-header .gnb .logo-white img { display: none; }
   .global-header .gnb .logo-black { display: block; }
-  .global-header .gnb-button-language, .global-header .gnb-button-menu i { color: #0c0e1c; }
+  .global-header .gnb-language-button, .global-header .gnb-menu-button i { color: #0c0e1c; }
   .global-header .gnb-menu { margin: 0; }
   .global-header .gnb.is-colse { background-color: transparent; }
   .global-header .gnb.is-colse::after { display: none; }
-  .global-header .gnb.is-colse .gnb-button-language, .global-header .gnb.is-colse .gnb-button-menu i, .global-header .gnb.is-colse .gnb-nav-item h3 { color: #fff; }
+  .global-header .gnb.is-colse .gnb-language-button, .global-header .gnb.is-colse .gnb-menu-button i, .global-header .gnb.is-colse .gnb-nav-item h3 { color: #fff; }
   .global-header .gnb.is-colse .logo-white img { display: block; }
   .global-header .gnb.is-colse .logo-black img { display: none; }
   .global-header .gnb-button-wrap { display: flex; align-items: center; justify-content: center; }
-  .global-header .gnb-button-menu { order: 2; } }
+  .global-header .gnb-menu-button { order: 2; } }
 
-@media screen and (min-width: 1200px) { .global-header .gnb-button-language { order: 1; width: 80px; margin-right: 10px; border-radius: 26px; }
-  .global-header .gnb-button-language i { margin-left: 10px; } }
+@media screen and (min-width: 1200px) { .global-header .gnb-language-button { order: 1; width: 80px; margin-right: 10px; border-radius: 26px; }
+  .global-header .gnb-language-button i { margin-left: 10px; } }
 
 .global-footer { font-size: 10px; background-color: #000; }
 
@@ -698,7 +704,9 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .sidebar-logo img { display: block; width: auto; height: 45px; }
 
-.sidebar-close-button { width: 44px; height: 44px; font-size: 20px; color: #0c0e1c; }
+.sidebar-close-button { width: 44px; height: 44px; font-size: 20px; color: #0c0e1c; transition: transform 200ms ease-in-out; }
+
+.sidebar-close-button:hover { transform: scale(1.2); }
 
 @media screen and (min-width: 768px) { .sidebar { width: 82%; } }
 
