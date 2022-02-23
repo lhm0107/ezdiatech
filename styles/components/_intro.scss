@@ -7,7 +7,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	&-box {
+	&-head {
 		&-title {
 			margin-bottom: 10px;
 			font-family: $font-sub;
@@ -34,7 +34,7 @@
 		padding-top: 300px;
 		background-image: url('./assets/images/img-index-01.jpg');
 
-		&-box {
+		&-head {
 			&-title {
 				font-size: 70px;
 				line-height: 80px;

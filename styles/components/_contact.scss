@@ -1,35 +1,91 @@
 .contact {
+	padding: 0 15px;
+	padding-bottom: 55px;
 	background-color: #000;
 
+	&-head {
+		margin-bottom: 15px;
+
+		h2,
+		p,
+		a {
+			color: $white;
+		}
+
+		p {
+			opacity: 0.6;
+		}
+	}
+
+	@include responsive(T) {
+		padding: 0 40px 110px;
+	}
+
 	@include responsive(D) {
-		position: relative;
-		height: 640px;
+		padding: 0 0;
 
 		&-box {
-			padding: -30px 0;
+			position: relative;
+			min-width: 1200px;
+			height: 750px;
 
 			.figure {
 				position: absolute;
 				top: 0;
 				left: 0;
-
-				&-image {
-					width: 50vw;
-
-					img {
-						border-radius: 0;
-					}
-				}
+				width: 45%;
 			}
 		}
 
-		&-head.newsroom-head {
+		&-head {
 			position: absolute;
-			width: calc(50vw + 60px);
 			right: 0;
 			bottom: 110px;
-			margin-top: 0;
-			background-color: $blue;
+			width: 60%;
+			height: 70%;
+			padding-left: 15%;
+			background-color: #08308b;
+			margin-bottom: 0;
+
+			&-title {
+				@include position-center-y;
+				width: 274px;
+				height: 230px;
+			}
 		}
 	}
+
+	// 	position: relative;
+
+	// 	&-box {
+	// 		position: absolute;
+	// 		width: 100vw;
+	// 		min-height: 400px;
+	// 		margin-bottom: 110px;
+
+	// 		.figure {
+	// 			position: absolute;
+	// 			top: 0;
+	// 			left: 0;
+
+	// 			&-image {
+	// 				width: 50vw;
+
+	// 				img {
+	// 					border-radius: 0;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+
+	// 	&-head {
+	// 		position: absolute;
+	// 		right: 0;
+	// 		bottom: 110px;
+
+	// 		height: 65%;
+	// 		margin-top: 0;
+	// 		background-color: $blue;
+	// 	}
+	// }
 }
