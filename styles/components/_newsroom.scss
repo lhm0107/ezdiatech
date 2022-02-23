@@ -15,14 +15,6 @@
 		}
 	}
 
-	&-more {
-		display: inline-block;
-		width: 30px;
-		font-size: 10px;
-		line-height: 26px;
-		border-bottom: 1px solid $white;
-	}
-
 	&-slider {
 		position: relative;
 	}
@@ -81,6 +73,11 @@
 
 		&-head {
 			margin-top: 200px;
+			margin-left: 320px;
+		}
+
+		&-button {
+			bottom: 167px;
 		}
 
 		&::before {
@@ -90,10 +87,10 @@
 			width: 241px;
 			height: 735px;
 			font-family: $font-sub;
-			font-size: 102px;
-			font-weight: 800;
+			font-size: 98px;
+			font-weight: 600;
 			letter-spacing: 0;
-			color: #0b3cae;
+			color: $white;
 			content: 'GIVE CONCERN TAKE HEALTH';
 			opacity: 0.1;
 			writing-mode: vertical-rl;

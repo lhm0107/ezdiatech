@@ -41,6 +41,10 @@
 		}
 	}
 
+	@include responsive(T) {
+		margin-top: 20px;
+	}
+
 	@include responsive(D) {
 		@include text-style(13, rgba($white, 0.7), font-sub);
 		position: relative;
