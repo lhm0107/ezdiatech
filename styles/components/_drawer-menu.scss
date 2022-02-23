@@ -24,6 +24,10 @@
 				}
 			}
 		}
+
+		&:hover .drawer-menu-button {
+			color: $primary;
+		}
 	}
 
 	&-button {
@@ -31,6 +35,7 @@
 		max-width: 300px;
 		font-weight: 600;
 		text-align: left;
+		transition: color 200ms ease-in-out;
 
 		.ic-chevron {
 			display: inline-block;
@@ -48,13 +53,23 @@
 	&-term {
 		@include text-style(18);
 		font-weight: 700;
+
+		&:hover > a {
+			border-bottom: 2px solid $primary;
+		}
 	}
 
 	&-item {
 		a {
 			@include text-style(16, $secondary);
-			display: block;
+			display: inline;
 			font-weight: 400;
+			transition: color 200ms ease-in-out;
+		}
+
+		&:hover a {
+			color: $blue;
+			border-bottom: 2px solid $blue;
 		}
 	}
 
