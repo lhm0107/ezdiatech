@@ -641,6 +641,7 @@ i { /* use !important to prevent issues with browser extensions that change font
 .global-header .gnb-language-button i { font-size: 14px; }
 
 @media screen and (min-width: 768px) { .global-header .gnb { width: 100%; background-color: #fff; }
+  .global-header .gnb.is-open { height: 300px; }
   .global-header .gnb::after { display: block; height: 1px; background-color: #dfe0e8; content: ''; }
   .global-header .gnb .logo { position: static; margin-right: 10px; transform: none; }
   .global-header .gnb .logo-white img { display: none; }
