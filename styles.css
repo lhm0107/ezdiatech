@@ -542,9 +542,9 @@ i { /* use !important to prevent issues with browser extensions that change font
 @media screen and (min-width: 768px) { .contact { padding: 0 40px 110px; } }
 
 @media screen and (min-width: 1200px) { .contact { padding: 0 0; }
-  .contact-box { position: relative; min-width: 1200px; height: 750px; }
+  .contact-box { position: relative; height: 750px; min-width: 1200px; }
   .contact-box .figure { position: absolute; top: 0; left: 0; width: 45%; }
-  .contact-head { position: absolute; right: 0; bottom: 110px; width: 60%; height: 70%; padding-left: 15%; background-color: #08308b; margin-bottom: 0; }
+  .contact-head { position: absolute; right: 0; bottom: 110px; width: 60%; height: 70%; padding-left: 15%; margin-bottom: 0; background-color: #08308b; }
   .contact-head-title { position: absolute; top: 50%; transform: translateY(-50%); width: 274px; height: 230px; } }
 
 /*
