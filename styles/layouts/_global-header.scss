@@ -28,7 +28,7 @@
 			}
 		}
 
-		&-button-menu {
+		&-menu-button {
 			order: 1;
 			width: 44px;
 			height: 44px;
@@ -39,7 +39,7 @@
 			}
 		}
 
-		&-button-language {
+		&-language-button {
 			@include flexbox;
 			order: 2;
 			width: 44px;
@@ -85,8 +85,8 @@
 				}
 			}
 
-			&-button-language,
-			&-button-menu i {
+			&-language-button,
+			&-menu-button i {
 				color: $primary;
 			}
 
@@ -101,8 +101,8 @@
 					display: none;
 				}
 
-				.gnb-button-language,
-				.gnb-button-menu i,
+				.gnb-language-button,
+				.gnb-menu-button i,
 				.gnb-nav-item h3 {
 					color: $white;
 				}
@@ -124,13 +124,13 @@
 				@include flexbox;
 			}
 
-			&-button-menu {
+			&-menu-button {
 				order: 2;
 			}
 		}
 
 		@include responsive(D) {
-			&-button-language {
+			&-language-button {
 				order: 1;
 				width: 80px;
 				margin-right: 10px;
