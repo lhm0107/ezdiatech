@@ -242,19 +242,20 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 @media screen and (min-width: 768px) { .gnb-nav { position: relative; z-index: 60; width: 100%; height: 100px; }
   .gnb-nav-wrap { position: absolute; left: 50%; transform: translateX(-50%); top: -1px; }
+  .gnb-nav-wrap.is-open { height: 301px; background-color: transparent; }
   .gnb-nav-list { display: flex; align-items: flex-start; justify-content: center; height: 100px; margin-right: 10px; }
   .gnb-nav-list.is-open .sub-list { max-height: 600px; }
   .gnb-nav-item h3 { font-size: 16px; line-height: 28px; color: #0c0e1c; font-family: "Poppins", sans-serif; letter-spacing: 0; position: relative; display: inline-block; padding: 0 15px; font-weight: 600; line-height: 100px; border-bottom: 3px solid transparent; }
   .gnb-nav-item h3:active { border-bottom: 3px solid #2c64e5; }
-  .gnb-nav .sub-list { max-height: 0; padding-top: 40px; overflow: hidden; transition: max-height 200ms ease-in-out; }
+  .gnb-nav .sub-list { max-height: 0; padding-top: 40px; overflow: hidden; }
   .gnb-nav .sub-list .sub-item { margin-bottom: 11px; }
   .gnb-nav .sub-list .sub-item:last-child { margin-bottom: 0; }
   .gnb-nav .sub-list .sub-item a { font-size: 16px; line-height: 28px; color: #5e6074; display: block; text-align: center; }
   .gnb-nav .sub-list .sub-item a:active { color: #2c64e5; } }
 
 @media screen and (min-width: 1200px) { .gnb-nav-list { margin-right: 0; }
+  .gnb-nav-item:hover h3 { border-bottom: 3px solid #2c64e5; }
   .gnb-nav-item h3 { padding: 0 40px; }
-  .gnb-nav-item h3:hover { border-bottom: 3px solid #2c64e5; }
   .gnb-nav-item .sub-item a:hover { color: #2c64e5; } }
 
 .drawer-menu { margin-top: 70px; }
@@ -640,7 +641,7 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .global-header .gnb-language-button i { font-size: 14px; }
 
-@media screen and (min-width: 768px) { .global-header .gnb { width: 100%; background-color: #fff; }
+@media screen and (min-width: 768px) { .global-header .gnb { width: 100%; overflow: hidden; background-color: #fff; }
   .global-header .gnb.is-open { height: 300px; }
   .global-header .gnb::after { display: block; height: 1px; background-color: #dfe0e8; content: ''; }
   .global-header .gnb .logo { position: static; margin-right: 10px; transform: none; }

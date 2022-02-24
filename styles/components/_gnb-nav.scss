@@ -8,6 +8,11 @@
 		&-wrap {
 			@include position-center-x;
 			top: -1px;
+
+			&.is-open {
+				height: 301px;
+				background-color: transparent;
+			}
 		}
 
 		&-list {
@@ -42,7 +47,6 @@
 			max-height: 0;
 			padding-top: 40px;
 			overflow: hidden;
-			transition: max-height 200ms ease-in-out;
 
 			.sub-item {
 				margin-bottom: 11px;
@@ -70,12 +74,12 @@
 		}
 
 		&-item {
+			&:hover h3 {
+				border-bottom: 3px solid $blue;
+			}
+
 			h3 {
 				padding: 0 40px;
-
-				&:hover {
-					border-bottom: 3px solid $blue;
-				}
 			}
 
 			.sub-item {

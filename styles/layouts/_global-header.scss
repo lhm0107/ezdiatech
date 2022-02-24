@@ -60,6 +60,7 @@
 
 		@include responsive(T) {
 			width: 100%;
+			overflow: hidden;
 			background-color: $white;
 
 			&.is-open {
