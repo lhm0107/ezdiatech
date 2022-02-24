@@ -20,7 +20,7 @@
 	</head>
 	<body>
 		<header class="global-header">
-			<div class="gnb">
+			<div class="gnb is">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-4">
@@ -555,6 +555,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 		<script src="./js/sidebar.js"></script>
 		<script src="./js/sidebar-drawer.js"></script>
+		<script src="./js/gnb.js"></script>
 		<script>
 		var slider = tns({
 			container: '.newsroom-slider-list',
@@ -577,6 +578,7 @@
 					gutter:160,
 					autoWidth:true,
 					mouseDrag:true,
+					center:false,
 				}
 			}
 		});
