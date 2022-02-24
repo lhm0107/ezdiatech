@@ -1,8 +1,7 @@
 const drawerMenuButtonList = document.querySelectorAll('.sidebar-nav .drawer-menu-button');
 
 function toggleDrawerMenu() {
-	const drawerMenuItem = this.parentNode;
-	const drawerMenuList = drawerMenuItem.parentNode;
+	const drawerMenuList = this.parentNode;
 	drawerMenuList.classList.toggle('is-open');
 }
 

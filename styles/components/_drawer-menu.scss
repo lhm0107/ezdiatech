@@ -32,9 +32,11 @@
 
 	&-button {
 		@include text-style(32, $border, $font-sub);
+		display: inline;
 		max-width: 300px;
 		font-weight: 600;
 		text-align: left;
+		cursor: pointer;
 		transition: color 200ms ease-in-out;
 
 		.ic-chevron {

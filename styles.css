@@ -271,7 +271,7 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .drawer-menu-list:hover .drawer-menu-button { color: #0c0e1c; }
 
-.drawer-menu-button { font-size: 32px; line-height: 48px; color: #dfe0e8; font-family: "Poppins", sans-serif; letter-spacing: 0; max-width: 300px; font-weight: 600; text-align: left; transition: color 200ms ease-in-out; }
+.drawer-menu-button { font-size: 32px; line-height: 48px; color: #dfe0e8; font-family: "Poppins", sans-serif; letter-spacing: 0; display: inline; max-width: 300px; font-weight: 600; text-align: left; cursor: pointer; transition: color 200ms ease-in-out; }
 
 .drawer-menu-button .ic-chevron { display: inline-block; transition: transform 200ms ease-in-out; }
 
