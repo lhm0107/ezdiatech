@@ -16,8 +16,37 @@
 		content: '';
 	}
 
+	&.is-top {
+		&::after {
+			display: none;
+		}
+	}
+
 	.gnb {
 		min-width: 350px;
+		background-color: $white;
+
+		&.is-top {
+			background-color: transparent;
+
+			.gnb-language-button,
+			.gnb-menu-button i,
+			.gnb-nav-item h3 {
+				color: $white;
+			}
+
+			.logo-white {
+				display: block;
+			}
+
+			.logo-black {
+				display: none;
+			}
+
+			.gnb-language-button.sm-only {
+				border: 1px solid $white;
+			}
+		}
 
 		&-menu {
 			@include flexbox(between);
@@ -27,14 +56,18 @@
 			.logo {
 				@include position-center;
 
-				a,
-				img {
-					display: block;
+				&-white {
+					display: none;
 				}
 
-				img {
-					width: auto;
-					height: 45px;
+				&-black {
+					display: block;
+
+					img {
+						display: block;
+						width: auto;
+						height: 45px;
+					}
 				}
 			}
 		}
@@ -46,7 +79,7 @@
 
 			i {
 				font-size: 43px;
-				color: $white;
+				color: $primary;
 			}
 		}
 
@@ -59,9 +92,9 @@
 			font-size: 14px;
 			font-weight: 600;
 			line-height: 28px;
-			color: $white;
+			color: $primary;
 			text-align: center;
-			border: 1px solid $border;
+			border: 1px solid $primary;
 			border-radius: 13px;
 
 			i {
@@ -80,7 +113,7 @@
 				height: 300px;
 				background-color: $white;
 				content: '';
-				transition: transform 200ms ease-in-out;
+				transition: transform 150ms ease-in-out;
 			}
 
 			&.is-open {
@@ -91,20 +124,16 @@
 				}
 			}
 
+			&.is-top {
+				&::before {
+					display: none;
+				}
+			}
+
 			.logo {
 				position: static;
 				margin-right: 10px;
 				transform: none;
-
-				&-white {
-					img {
-						display: none;
-					}
-				}
-
-				&-black {
-					display: block;
-				}
 			}
 
 			&-language-button,
@@ -114,32 +143,6 @@
 
 			&-menu {
 				margin: 0;
-			}
-
-			&.is-colse {
-				background-color: transparent;
-
-				&::after {
-					display: none;
-				}
-
-				.gnb-language-button,
-				.gnb-menu-button i,
-				.gnb-nav-item h3 {
-					color: $white;
-				}
-
-				.logo-white {
-					img {
-						display: block;
-					}
-				}
-
-				.logo-black {
-					img {
-						display: none;
-					}
-				}
 			}
 
 			&-button-wrap {
