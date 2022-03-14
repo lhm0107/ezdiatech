@@ -637,7 +637,7 @@ i { /* use !important to prevent issues with browser extensions that change font
 
 .global-header .gnb.is-top .logo-black { display: none; }
 
-.global-header .gnb.is-top .gnb-language-button.sm-only { border: 1px solid #fff; }
+.global-header .gnb.is-top .gnb-language-button { border: 1px solid #fff; }
 
 .global-header .gnb-menu { display: flex; align-items: center; justify-content: space-between; position: relative; margin: 10px 0; }
 
