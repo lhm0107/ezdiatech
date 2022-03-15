@@ -25,14 +25,13 @@ const gnbNavWrapIsOpen = document.querySelector('.gnb-nav-wrap.is-open');
 
 gnbNavWrap.addEventListener('mouseleave', gnbNavClose);
 
-document.addEventListener('scroll', function(){
-	let mainScrollHeight = window.scrollY
+document.addEventListener('scroll', function () {
+	let mainScrollHeight = window.scrollY;
 	if (mainScrollHeight == 0) {
 		gnb.classList.add('is-top');
-	globalHeader.classList.add('is-top');
-	} else if (mainScrollHeight > 0) {
-			gnb.classList.remove('is-top');
-	globalHeader.classList.remove('is-top');
+		globalHeader.classList.add('is-top');
+	} else {
+		gnb.classList.remove('is-top');
+		globalHeader.classList.remove('is-top');
 	}
-})
-
+});
